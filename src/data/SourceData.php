@@ -1,0 +1,323 @@
+<?php
+
+namespace Soandso\ContinentalIndex\Data;
+
+use Exception;
+
+/**
+ * Class for working with source data
+ *
+ * @author Dmytriyenko Vyacheslav <dmytriyenko.vyacheslav@gmail.com>
+ */
+class SourceData implements SourceDataInterface
+{
+    /**
+     * @var string Input source type
+     */
+    private string $inputType;
+
+    /**
+     * @var string|array Input source
+     */
+    private $source;
+
+    /**
+     * @var string Temperature units
+     */
+    private string $tempUnits;
+
+    /**
+     * @var float Geographic latitude
+     */
+    private float $latitude;
+
+    /**
+     * @var string[] Supported types of source data
+     */
+    private array $inputTypes = [
+        'file', 'array', 'json',
+    ];
+
+    /**
+     * @var string[] Supported temperature unit options
+     * F (Fahrenheit), C (Degree Celsius)
+     */
+    private array $tempUnitOptions = [
+        'F', 'C',
+    ];
+
+    /**
+     * Returns Input source type
+     *
+     * @return string Input source type
+     */
+    public function getInputType() : string
+    {
+        return $this->inputType;
+    }
+
+    /**
+     * Returns input source
+     *
+     * @return string|array Input source
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * Returns temperature units
+     *
+     * @return string Temperature units
+     */
+    public function getTempUnits() : string
+    {
+        return $this->tempUnits;
+    }
+
+    /**
+     * Returns geographic latitude
+     *
+     * @return float Geographic latitude
+     */
+    public function getLatitude() : float
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Sets Input source type
+     *
+     * @param string $inputType Input source type
+     * @throws Exception
+     */
+    public function setInputType(string $inputType) : void
+    {
+        if ($this->checkInputType($inputType)) {
+            $this->inputType = $inputType;
+        } else {
+            throw new Exception('Data source type is not correct');
+        }
+    }
+
+    /**
+     * @param string|array $source Input source
+     * @throws Exception
+     */
+    public function setSource($source) : void
+    {
+        if ($this->checkSource($source)) {
+            $this->source = $source;
+        } else {
+            throw new Exception('Data source entered incorrectly');
+        }
+    }
+
+    /**
+     * Sets temperature units
+     *
+     * @param string $tempUnits Temperature units
+     * @throws Exception
+     */
+    public function setTempUnits(string $tempUnits) : void
+    {
+        if ($this->checkTempUnits($tempUnits)) {
+            $this->tempUnits = $tempUnits;
+        } else {
+            throw new Exception('Temperature units are incorrectly entered');
+        }
+    }
+
+    /**
+     * Sets geographic latitude
+     *
+     * @param float $latitude Geographic latitude
+     * @throws Exception
+     */
+    public function setLatitude(float $latitude) : void
+    {
+        if ($this->checkLatitude($latitude)) {
+            $this->latitude = $latitude;
+        } else {
+            throw new Exception('Geographic latitude entered incorrectly');
+        }
+    }
+
+    /**
+     * Assimilates original data
+     *
+     * @param string $inputType Input data source type - 'file', 'array', 'json'
+     *
+     * @param string $source Incoming annual amplitude data
+     *  Source data structure
+     * file:
+     * Year, space, temperature amplitude value
+     * Example:
+     * 2022 78.5
+     * .........
+     *
+     * array:
+     * [
+     *  Year, temperature amplitude value
+     * ]
+     * Example:
+     * [
+     *  [2017, 80.9],
+     *  [2018, 70.3],
+     *  ............
+     * ]
+     *
+     * json:
+     * This format is an array (see above) encoded into a json string
+     *
+     * @param string $tempUnits Temperature amplitude units - 'F' (Fahrenheit) or 'C' (Degree Celsius)
+     * @param float $latitude Location latitude
+     * @return mixed|array
+     * @throws Exception
+     *
+     * @author Dmytriyenko Vyacheslav <dmytriyenko.vyacheslav@gmail.com>
+     */
+    public function assimilateData(string $inputType, $source, string $tempUnits, float $latitude) : array
+    {
+        $this->setData($inputType, $source, $tempUnits, $latitude);
+        $TempAmplitude = $this->getTempAmplitudeData();
+        if ($TempAmplitude === false) {
+            throw new Exception();
+        }
+
+        return $TempAmplitude;
+    }
+
+    /**
+     * Returns the result of checking the validity of the type of the source data
+     *
+     * @param string $inputType Input data source type
+     * @return bool
+     */
+    protected function checkInputType(string $inputType) : bool
+    {
+        return in_array($inputType, $this->inputTypes);
+    }
+
+    /**
+     * Returns the result of checking the validity of the data source
+     *
+     * @param string|array $source Input source
+     * @return bool
+     */
+    protected function checkSource($source) : bool
+    {
+        if (strcasecmp($this->getInputType(), 'array') == 0) {
+            return is_array($source);
+        } else {
+            return is_string($source);
+        }
+    }
+
+    /**
+     * Returns the result of checking the validity of the Temperature amplitude units
+     *
+     * @param string $tempUnits Temperature amplitude units
+     * @return bool
+     */
+    protected function checkTempUnits(string $tempUnits) : bool
+    {
+        return in_array($tempUnits, $this->tempUnitOptions);
+    }
+
+    /**
+     * Returns the result of checking the validity of the location latitude
+     *
+     * @param float $latitude Location latitude
+     * @return bool
+     */
+    public function checkLatitude(float $latitude) : bool
+    {
+        return $latitude >=0 && $latitude <= 90;
+    }
+
+    /**
+     * Initializes and sets all initial data
+     *
+     * @param string $inputType Input data source type
+     * @param string|array $source Input source
+     * @param string $tempUnits Temperature amplitude units
+     * @param float $latitude Location latitude
+     * @throws Exception
+     */
+    public function setData(string $inputType, $source, string $tempUnits, float $latitude)
+    {
+        $this->setInputType($inputType);
+        $this->setSource($source);
+        $this->setTempUnits($tempUnits);
+        $this->setLatitude($latitude);
+    }
+
+    /**
+     * Returns prepared annual air temperature amplitude data
+     *
+     * @return array|false|mixed|string
+     */
+    public function getTempAmplitudeData()
+    {
+        if (strcasecmp($this->getInputType(), 'file') == 0) {
+            return $this->getSourceFromFile();
+        } elseif (strcasecmp($this->getInputType(), 'array') == 0) {
+            if (count($this->getSource()) > 0) {
+                return $this->getSource();
+            } else {
+                return false;
+            }
+        } elseif (strcasecmp($this->getInputType(), 'json') == 0) {
+            return $this->getSourceFromJson();
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Returns the prepared data of the annual air temperature amplitude from the source file type
+     *
+     * @return array|false
+     */
+    protected function getSourceFromFile()
+    {
+        $inputFile = fopen($this->getSource(), 'r');
+
+        $output = [];
+        while (!feof($inputFile)) {
+            $line = fgets($inputFile);
+            if ($line === false) {
+                continue;
+            }
+
+            $sourceItem = explode(' ', $line);
+            $output[] = [$sourceItem[0], $sourceItem[1]];
+        }
+
+        fclose($inputFile);
+
+        if (count($output) > 0) {
+            return $output;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Returns prepared annual air temperature amplitude data from json source type
+     *
+     * @return mixed
+     */
+    protected function getSourceFromJson()
+    {
+        $output =  json_decode($this->getSource());
+
+        if (count($output) > 0) {
+            return $output;
+        } else {
+            return false;
+        }
+    }
+}
