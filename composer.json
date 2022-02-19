@@ -1,0 +1,34 @@
+{
+    "name": "soandso/continental-index",
+    "description": "Library for calculating the index of continentality - a numerical characteristic of continental climate",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Soandso\\ContinentalIndex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "Soandso\\ContinentalIndex\\Tests": "tests"
+    },
+    "authors": [
+        {
+            "name": "Dmytriyenko Vyacheslav",
+            "email": "dmytriyenko.vyacheslav@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://soandso.biz/"
+    },
+    "config" : {
+        "sort-packages" : true
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "9.5.x-dev"
+    }
+}
