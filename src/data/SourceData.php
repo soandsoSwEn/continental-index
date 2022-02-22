@@ -22,9 +22,14 @@ class SourceData implements SourceDataInterface
     private $source;
 
     /**
-     * @var string Temperature units
+     * @var string Input temperature units
      */
-    private string $tempUnits;
+    private string $inputTempUnits;
+
+    /**
+     * @var string Output temperature units
+     */
+    private string $outputTempUnits;
 
     /**
      * @var float Geographic latitude
@@ -45,6 +50,11 @@ class SourceData implements SourceDataInterface
     private array $tempUnitOptions = [
         'F', 'C',
     ];
+
+    public function __construct(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
+    {
+        $this->setInitData($inputType, $source, $inputTempUnits, $outputTempUnits, $latitude);
+    }
 
     /**
      * Returns Input source type
@@ -69,11 +79,19 @@ class SourceData implements SourceDataInterface
     /**
      * Returns temperature units
      *
-     * @return string Temperature units
+     * @return string Input temperature units
      */
-    public function getTempUnits() : string
+    public function getInputTempUnits() : string
     {
-        return $this->tempUnits;
+        return $this->inputTempUnits;
+    }
+
+    /**
+     * @return string Output temperature units
+     */
+    public function getOutputTempUnits() : string
+    {
+        return $this->outputTempUnits;
     }
 
     /**
@@ -117,15 +135,21 @@ class SourceData implements SourceDataInterface
     /**
      * Sets temperature units
      *
-     * @param string $tempUnits Temperature units
+     * @param string $inputTempUnits Input temperature units
      * @throws Exception
      */
-    public function setTempUnits(string $tempUnits) : void
+    public function setTempUnits(string $inputTempUnits, string $outputTempUnits) : void
     {
-        if ($this->checkTempUnits($tempUnits)) {
-            $this->tempUnits = $tempUnits;
+        if ($this->checkTempUnits($inputTempUnits)) {
+            $this->inputTempUnits = $inputTempUnits;
         } else {
-            throw new Exception('Temperature units are incorrectly entered');
+            throw new Exception('Input temperature units are incorrectly entered');
+        }
+
+        if ($this->checkTempUnits($outputTempUnits)) {
+            $this->outputTempUnits = $outputTempUnits;
+        } else {
+            throw new Exception('Output temperature units are incorrectly entered');
         }
     }
 
@@ -145,42 +169,15 @@ class SourceData implements SourceDataInterface
     }
 
     /**
-     * Assimilates original data
+     * Returns temperature amplitude data
      *
-     * @param string $inputType Input data source type - 'file', 'array', 'json'
+     * Assimilates the initial data, returns the prepared data to the calculation of the continentality index
      *
-     * @param string $source Incoming annual amplitude data
-     *  Source data structure
-     * file:
-     * Year, space, temperature amplitude value
-     * Example:
-     * 2022 78.5
-     * .........
-     *
-     * array:
-     * [
-     *  Year, temperature amplitude value
-     * ]
-     * Example:
-     * [
-     *  [2017, 80.9],
-     *  [2018, 70.3],
-     *  ............
-     * ]
-     *
-     * json:
-     * This format is an array (see above) encoded into a json string
-     *
-     * @param string $tempUnits Temperature amplitude units - 'F' (Fahrenheit) or 'C' (Degree Celsius)
-     * @param float $latitude Location latitude
-     * @return mixed|array
+     * @return array
      * @throws Exception
-     *
-     * @author Dmytriyenko Vyacheslav <dmytriyenko.vyacheslav@gmail.com>
      */
-    public function assimilateData(string $inputType, $source, string $tempUnits, float $latitude) : array
+    public function getAssimilateData() : array
     {
-        $this->setData($inputType, $source, $tempUnits, $latitude);
         $TempAmplitude = $this->getTempAmplitudeData();
         if ($TempAmplitude === false) {
             throw new Exception();
@@ -240,17 +237,41 @@ class SourceData implements SourceDataInterface
     /**
      * Initializes and sets all initial data
      *
-     * @param string $inputType Input data source type
-     * @param string|array $source Input source
-     * @param string $tempUnits Temperature amplitude units
+     * @param string $inputType Input data source type - 'file', 'array', 'json'
+     *
+     * @param array|string $source Incoming annual amplitude data
+     * Source data structure
+     * file:
+     * Year, space, temperature amplitude value
+     * Example:
+     * 2022 78.5
+     * .........
+     *
+     * array:
+     * [
+     *  Year, temperature amplitude value
+     * ]
+     * Example:
+     * [
+     *  [2017, 80.9],
+     *  [2018, 70.3],
+     *  ............
+     * ]
+     *
+     * json:
+     * This format is an array (see above) encoded into a json string
+     *
+     * @param string $inputTempUnits Input temperature amplitude units - 'F' (Fahrenheit) or 'C' (Degree Celsius)
+     * @param string $outputTempUnits Output temperature amplitude units - 'F' (Fahrenheit) or 'C' (Degree Celsius)
      * @param float $latitude Location latitude
+     * @return void
      * @throws Exception
      */
-    public function setData(string $inputType, $source, string $tempUnits, float $latitude)
+    public function setInitData(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude) : void
     {
         $this->setInputType($inputType);
         $this->setSource($source);
-        $this->setTempUnits($tempUnits);
+        $this->setTempUnits($inputTempUnits, $outputTempUnits);
         $this->setLatitude($latitude);
     }
 
