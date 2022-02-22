@@ -279,17 +279,14 @@ class SourceData implements SourceDataInterface
      * Returns prepared annual air temperature amplitude data
      *
      * @return array|false|mixed|string
+     * @throws Exception
      */
     public function getTempAmplitudeData()
     {
         if (strcasecmp($this->getInputType(), 'file') == 0) {
             return $this->getSourceFromFile();
         } elseif (strcasecmp($this->getInputType(), 'array') == 0) {
-            if (count($this->getSource()) > 0) {
-                return $this->getSource();
-            } else {
-                return false;
-            }
+            return $this->getSourceFromArray();
         } elseif (strcasecmp($this->getInputType(), 'json') == 0) {
             return $this->getSourceFromJson();
         } else {
@@ -314,10 +311,35 @@ class SourceData implements SourceDataInterface
             }
 
             $sourceItem = explode(' ', $line);
-            $output[] = [$sourceItem[0], $sourceItem[1]];
+            $output[] = [intval($sourceItem[0]), $this->convertTemperature($this->inputTempUnits, $this->outputTempUnits, $sourceItem[1])];
         }
 
         fclose($inputFile);
+
+        if (count($output) > 0) {
+            return $output;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Returns prepared annual air temperature amplitude data from array source type
+     *
+     * @return array|false Air temperature amplitude data
+     * @throws Exception
+     */
+    protected function getSourceFromArray()
+    {
+        if (count($this->getSource()) == 0) {
+            return false;
+        }
+
+        $output =  [];
+
+        foreach ($this->getSource() as $item) {
+            $output = [intval($item[0]), $this->convertTemperature($this->inputTempUnits, $this->outputTempUnits, $item[1])];
+        }
 
         if (count($output) > 0) {
             return $output;
@@ -340,5 +362,57 @@ class SourceData implements SourceDataInterface
         } else {
             return false;
         }
+    }
+
+    /**
+     * Returns the temperature value in the selected unit of measurement
+     *
+     * Converts temperature values from one unit of measure to another
+     *
+     * @param string $unitFrom Input temperature units
+     * @param string $unitTo Output temperature units
+     * @param float $value Temperature value
+     * @return float
+     * @throws Exception
+     */
+    protected function convertTemperature(string $unitFrom, string $unitTo, float $value) : float
+    {
+        if (strcasecmp($unitFrom, $unitTo) == 0) {
+            return round($value, 2);
+        }
+
+        if (strcasecmp($unitFrom, 'F') == 0 && strcasecmp($unitTo, 'C') == 0) {
+            return $this->convertFromFtoC($value);
+        } elseif (strcasecmp($unitFrom, 'C') == 0 && strcasecmp($unitTo, 'F') == 0) {
+            return $this->convertFromCtoF($value);
+        } else {
+            throw new Exception('Temperature units are incorrectly entered');
+        }
+    }
+
+    /**
+     * Returns the temperature value in degrees Celsius
+     *
+     * Converts temperature values in degrees Fahrenheit to values in degrees Celsius
+     *
+     * @param float $value Temperature value in degrees Fahrenheit
+     * @return float Temperature value in degrees Celsius
+     */
+    private function convertFromFtoC(float $value) : float
+    {
+        return round((($value - 32) / 1.8), 2);
+    }
+
+    /**
+     * Returns the temperature value in degrees Fahrenheit
+     *
+     * Converts temperature values in degrees Celsius to degrees Fahrenheit
+     *
+     * @param float $value Temperature value in degrees Celsius
+     * @return float Temperature value in degrees Fahrenheit
+     */
+    private function convertFromCtoF(float $value) : float
+    {
+        return round((($value * 1.8) + 32), 2);
     }
 }
