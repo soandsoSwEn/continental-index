@@ -20,4 +20,14 @@ class HromovIndex implements ContinentalIndexInterface
     {
         return round((($tempAmplitude - 5.4 * sin(deg2rad($longitude))) / $tempAmplitude), 2);
     }
+
+    public function getIndexAssets(array $tempAmplitudeData, float $longitude)
+    {
+        $indices = [];
+        foreach ($tempAmplitudeData as $amplitudeItem) {
+            $indices[] = [$amplitudeItem[0], $this->calcIndex($amplitudeItem[1], $longitude)];
+        }
+
+        return $indices;
+    }
 }
