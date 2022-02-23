@@ -56,11 +56,11 @@ class Register
     /**
      * Initiates start-up data for the calculation of the continental index
      *
-     * @param string $inputType
-     * @param string $source
-     * @param string $inputTempUnits
-     * @param string $outputTempUnits
-     * @param float $latitude
+     * @param string $inputType Input temperature amplitude units
+     * @param string $source Input data format
+     * @param string $inputTempUnits Input temperature amplitude units
+     * @param string $outputTempUnits Output temperature amplitude units
+     * @param float $latitude Location latitude
      */
     protected function setData(string $inputType, string $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
     {
