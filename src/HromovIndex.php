@@ -3,7 +3,7 @@
 namespace Soandso\ContinentalIndex;
 
 /**
- * HromovIndex class contains a method for calculating the continentality index using the Khromov method
+ * HromovIndex class contains a method for calculating the continentality index using the Hromov method
  *
  * @author Dmytriyenko Vyacheslav <dmytriyenko.vyacheslav@gmail.com>
  */
@@ -21,7 +21,14 @@ class HromovIndex implements ContinentalIndexInterface
         return round((($tempAmplitude - 5.4 * sin(deg2rad($longitude))) / $tempAmplitude), 2);
     }
 
-    public function getIndexAssets(array $tempAmplitudeData, float $longitude)
+    /**
+     * array[year, temperature amplitude]
+     * @param array $tempAmplitudeData - Dataset of annual temperature amplitude (see above)
+     * @param float $longitude Geographic latitude
+     * array[year, continentality Index]
+     * @return array Array of Continentality Index Data (see above)
+     */
+    public function getIndexAssets(array $tempAmplitudeData, float $longitude) : array
     {
         $indices = [];
         foreach ($tempAmplitudeData as $amplitudeItem) {
