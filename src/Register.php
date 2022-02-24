@@ -56,8 +56,8 @@ class Register
     /**
      * Initiates start-up data for the calculation of the continental index
      *
-     * @param string $inputType Input temperature amplitude units
-     * @param string $source Input data format
+     * @param string $inputType Input source type
+     * @param string $source Input source
      * @param string $inputTempUnits Input temperature amplitude units
      * @param string $outputTempUnits Output temperature amplitude units
      * @param float $latitude Location latitude
