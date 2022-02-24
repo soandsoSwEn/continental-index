@@ -91,7 +91,7 @@ $latitude - Location latitude
 
 ```
 
-To get the calculation of the continentality index, use the method getIndex
+To get the calculation of the continentality index, use the method ```getIndex```
 
 ```php
 
@@ -115,3 +115,17 @@ Example usage
 $index = new Register(Register::FILE, __DIR__ . '/amplitude.txt', Register::FAHRENHEIT, Register::CELSIUS, 45.5);
 $index->getIndex(Register::HROMOV_INDEX, Register::FILE, __DIR__);
 ```
+
+Standards
+---------
+
+Continental index conforms to the following standards:
+
+* PSR-2  - Basic coding standard (https://www.php-fig.org/psr/psr-2/)
+* PSR-4  - Autoloader (https://www.php-fig.org/psr/psr-4/)
+* PSR-12 - Extended coding style guide (https://www.php-fig.org/psr/psr-12/)
+
+License
+-------
+
+Grouping is licensed under the GPLv2 License (https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
