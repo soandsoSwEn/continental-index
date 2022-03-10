@@ -393,6 +393,8 @@ class SourceData implements SourceDataInterface
             return $this->convertFromFtoC($value);
         } elseif (strcasecmp($unitFrom, 'C') == 0 && strcasecmp($unitTo, 'F') == 0) {
             return $this->convertFromCtoF($value);
+        } else {
+            throw new Exception('Temperature units are incorrectly entered');
         }
     }
 
