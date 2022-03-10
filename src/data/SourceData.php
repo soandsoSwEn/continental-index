@@ -303,6 +303,9 @@ class SourceData implements SourceDataInterface
     protected function getSourceFromFile()
     {
         $inputFile = fopen($this->getSource(), 'r');
+        if ($inputFile === false) {
+            throw new Exception('Error opening source data file');
+        }
 
         $output = [];
         while (!feof($inputFile)) {
