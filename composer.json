@@ -28,6 +28,7 @@
         "php": "^7.4"
     },
     "require-dev": {
+        "mikey179/vfsstream": "2.0.x-dev",
         "mockery/mockery": "^1.5",
         "phpunit/phpunit": "9.5.x-dev"
     }
