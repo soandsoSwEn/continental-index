@@ -381,6 +381,10 @@ class SourceData implements SourceDataInterface
      */
     protected function convertTemperature(string $unitFrom, string $unitTo, float $value) : float
     {
+        if (!in_array($unitFrom, $this->tempUnitOptions) || !in_array($unitTo, $this->tempUnitOptions)) {
+            throw new Exception('Temperature units are incorrectly entered');
+        }
+
         if (strcasecmp($unitFrom, $unitTo) == 0) {
             return round($value, 2);
         }
@@ -389,8 +393,6 @@ class SourceData implements SourceDataInterface
             return $this->convertFromFtoC($value);
         } elseif (strcasecmp($unitFrom, 'C') == 0 && strcasecmp($unitTo, 'F') == 0) {
             return $this->convertFromCtoF($value);
-        } else {
-            throw new Exception('Temperature units are incorrectly entered');
         }
     }
 
