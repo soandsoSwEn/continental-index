@@ -298,6 +298,7 @@ class SourceData implements SourceDataInterface
      * Returns the prepared data of the annual air temperature amplitude from the source file type
      *
      * @return array|false
+     * @throws Exception
      */
     protected function getSourceFromFile()
     {
@@ -338,7 +339,7 @@ class SourceData implements SourceDataInterface
         $output =  [];
 
         foreach ($this->getSource() as $item) {
-            $output = [intval($item[0]), $this->convertTemperature($this->inputTempUnits, $this->outputTempUnits, $item[1])];
+            $output[] = [intval($item[0]), $this->convertTemperature($this->inputTempUnits, $this->outputTempUnits, $item[1])];
         }
 
         if (count($output) > 0) {
