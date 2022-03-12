@@ -1,6 +1,9 @@
 <?php
 
+namespace Soandso\ContinentalIndex\Tests;
+
 use bovigo\vfs\vfsStream;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 use Soandso\ContinentalIndex\Data\SourceData;
 use Soandso\ContinentalIndex\HromovIndex;
