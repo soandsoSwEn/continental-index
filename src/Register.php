@@ -48,7 +48,7 @@ class Register
      */
     private $sourceData;
 
-    public function __construct(string $inputType, string $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
+    public function __construct(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
     {
         $this->setData($inputType, $source, $inputTempUnits, $outputTempUnits, $latitude);
     }
@@ -57,12 +57,12 @@ class Register
      * Initiates start-up data for the calculation of the continental index
      *
      * @param string $inputType Input source type
-     * @param string $source Input source
+     * @param string|array $source Input source
      * @param string $inputTempUnits Input temperature amplitude units
      * @param string $outputTempUnits Output temperature amplitude units
      * @param float $latitude Location latitude
      */
-    protected function setData(string $inputType, string $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
+    protected function setData(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)
     {
         $this->sourceData = new SourceData($inputType, $source, $inputTempUnits, $outputTempUnits, $latitude);
     }
