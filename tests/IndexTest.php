@@ -122,12 +122,12 @@ class IndexTest extends TestCase
         $this->assertEquals($this->index->getIndexAssets($source), $actual);
     }
 
-    public function testGetIndexAssetsForJson()
+    public function testErrorGetIndexAssetsForArray()
     {
         $this->index = new Index('hromov', 'array');
 
         $actual = [
-            [2020, 0.78],
+            [2020, 0.79],
             [2021, 0.84],
         ];
 
@@ -142,6 +142,46 @@ class IndexTest extends TestCase
         $source->shouldReceive('getAssimilateData')->once()->andReturn($assimilateData);
         $source->shouldReceive('getLatitude')->once()->andReturn($latitude);
 
+        $this->assertNotEquals($this->index->getIndexAssets($source), $actual);
+    }
+
+    public function testGetIndexAssetsForJson()
+    {
+        $this->index = new Index('hromov', 'json');
+
+        $actual = '[[2020,0.78],[2021,0.84]]';
+
+        $assimilateData = [
+            [2020, 18.1],
+            [2021, 25.3]
+        ];
+
+        $latitude = 47.8;
+
+        $source = Mockery::mock(SourceData::class);
+        $source->shouldReceive('getAssimilateData')->once()->andReturn($assimilateData);
+        $source->shouldReceive('getLatitude')->once()->andReturn($latitude);
+
         $this->assertEquals($this->index->getIndexAssets($source), $actual);
+    }
+
+    public function testErrorGetIndexAssetsForJson()
+    {
+        $this->index = new Index('hromov', 'json');
+
+        $actual = '[[2020,0.78],[2021,0.85]]';
+
+        $assimilateData = [
+            [2020, 18.1],
+            [2021, 25.3]
+        ];
+
+        $latitude = 47.8;
+
+        $source = Mockery::mock(SourceData::class);
+        $source->shouldReceive('getAssimilateData')->once()->andReturn($assimilateData);
+        $source->shouldReceive('getLatitude')->once()->andReturn($latitude);
+
+        $this->assertNotEquals($this->index->getIndexAssets($source), $actual);
     }
 }
