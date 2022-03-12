@@ -38,8 +38,8 @@ class HromovIndexTest extends TestCase
             [2021, 25.3]
         ];
 
-        $longitude = 47.8;
+        $latitude = 47.8;
 
-        $this->assertEquals($this->hromovIndex->getIndexAssets($tempAmplitudeData, $longitude), $actual);
+        $this->assertEquals($this->hromovIndex->getIndexAssets($tempAmplitudeData, $latitude), $actual);
     }
 }
