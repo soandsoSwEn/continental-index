@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="HromovIndex.php" path="\">
+    <totals>
+      <lines total="41" comments="19" code="22" executable="5" executed="5" percent="100.00"/>
+      <methods count="2" tested="2" percent="100.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="1" percent="100.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="Soandso\ContinentalIndex\HromovIndex" start="10" executable="5" executed="5" crap="3">
+      <namespace name="Soandso\ContinentalIndex"/>
+      <method name="calcIndex" signature="calcIndex(float $tempAmplitude, float $latitude): float" start="19" end="22" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getIndexAssets" signature="getIndexAssets(array $tempAmplitudeData, float $latitude): array" start="31" end="39" crap="2" executable="4" executed="4" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="21">
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testCalcIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="33">
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="34">
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="35">
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="38">
+        <covered by="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Soandso</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ContinentalIndex</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="6">
+        <token name="T_DOC_COMMENT"> * HromovIndex class contains a method for calculating the continentality index using the Hromov method</token>
+      </line>
+      <line no="7">
+        <token name="T_DOC_COMMENT"> *</token>
+      </line>
+      <line no="8">
+        <token name="T_DOC_COMMENT"> * @author Dmytriyenko Vyacheslav &lt;dmytriyenko.vyacheslav@gmail.com&gt;</token>
+      </line>
+      <line no="9">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="10">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">HromovIndex</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IMPLEMENTS">implements</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ContinentalIndexInterface</token>
+      </line>
+      <line no="11">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="12">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT">     * Returns the continentality index calculated using the Khromov method</token>
+      </line>
+      <line no="14">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT">     * @param float $tempAmplitude Temperature amplitude value</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT">     * @param float $latitude The value of geographic latitude</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">     * @return float Continentality index</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">calcIndex</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">float</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$tempAmplitude</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$latitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+      </line>
+      <line no="20">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="21">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">round</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$tempAmplitude</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MINUS">-</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DNUMBER">5.4</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MULT">*</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">sin</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">deg2rad</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$latitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DIV">/</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$tempAmplitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">2</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="23"/>
+      <line no="24">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="25">
+        <token name="T_DOC_COMMENT">     * array[year, temperature amplitude]</token>
+      </line>
+      <line no="26">
+        <token name="T_DOC_COMMENT">     * @param array $tempAmplitudeData - Dataset of annual temperature amplitude (see above)</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT">     * @param float $latitude Geographic latitude</token>
+      </line>
+      <line no="28">
+        <token name="T_DOC_COMMENT">     * array[year, continentality Index]</token>
+      </line>
+      <line no="29">
+        <token name="T_DOC_COMMENT">     * @return array Array of Continentality Index Data (see above)</token>
+      </line>
+      <line no="30">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="31">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getIndexAssets</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$tempAmplitudeData</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$latitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+      </line>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$indices</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_FOREACH">foreach</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$tempAmplitudeData</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_AS">as</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$amplitudeItem</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="35">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$indices</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$amplitudeItem</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_LNUMBER">0</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">calcIndex</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$amplitudeItem</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$latitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="36">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="37"/>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$indices</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="40">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="41"/>
+    </source>
+  </file>
+</phpunit>
