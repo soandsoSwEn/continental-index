@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <build time="Sat Mar 12 21:50:29 MSK 2022" phpunit="9.5.18" coverage="9.2.15">
+    <runtime name="PHP" version="7.4.5" url="https://secure.php.net/"/>
+    <driver name="xdebug" version="2.9.4"/>
+  </build>
+  <project source="C:\OpenServerPanel\domains\continental-index.local\src">
+    <tests>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testSetData" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputArrayType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputFileType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputJsonType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetInputType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckArraySource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckFileSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorCheckArraySource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorCheckFileSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorCheckJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetFileSourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetArraySourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetJsonSourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetArraySourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetFileSourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetJsonSourceType" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckTempUnitsOfC" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckTempUnitsOfF" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorCheckTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorSetInputTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetOutputTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorSetOutputTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorSetTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetTempUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorOfMinCheckLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorOfMaxCheckLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorSetLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testExceptionSetLatitude" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testIsFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromNotEmptyFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromEmptyFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromErrorFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromNotEmptyArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromEmptyArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromNotEmptyJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetSourceFromEmptyJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromNotEmptyFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromEmptyFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromNotEmptyArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromEmptyArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromNotEmptyJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testGetTempAmplitudeDataFromEmptyJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessGetAssimilateDataFromFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorGetAssimilateDataFromFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessGetAssimilateDataFromArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorGetAssimilateDataFromArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessGetAssimilateDataFromJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorGetAssimilateDataFromJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckInputTypeOfFile" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckInputTypeOfArray" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessCheckInputTypeOfJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorCheckInputTypeOfJson" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessConvertFromFtoC" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorConvertFromFtoC" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessConvertFromCtoF" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorConvertFromCtoF" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessConvertTemperatureEqualUnits" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessConvertTemperatureForFToC" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessConvertTemperatureForCToF" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testErrorConvertTemperature" size="unknown" result="0" status="PASSED"/>
+    </tests>
+    <directory name="/">
+      <totals>
+        <lines total="839" comments="390" code="449" executable="120" executed="110" percent="91.67"/>
+        <methods count="36" tested="28" percent="77.78"/>
+        <functions count="0" tested="0" percent="0"/>
+        <classes count="4" tested="2" percent="50.00"/>
+        <traits count="0" tested="0" percent="0"/>
+      </totals>
+      <directory name="data">
+        <totals>
+          <lines total="470" comments="219" code="251" executable="79" executed="73" percent="92.41"/>
+          <methods count="23" tested="18" percent="78.26"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="SourceData.php" href="data/SourceData.php.xml">
+          <totals>
+            <lines total="427" comments="187" code="240" executable="79" executed="73" percent="92.41"/>
+            <methods count="23" tested="18" percent="78.26"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SourceDataInterface.php" href="data/SourceDataInterface.php.xml">
+          <totals>
+            <lines total="43" comments="32" code="11" executable="0" executed="0" percent="0"/>
+            <methods count="0" tested="0" percent="0"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="0" tested="0" percent="0"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <file name="ContinentalIndexInterface.php" href="ContinentalIndexInterface.php.xml">
+        <totals>
+          <lines total="21" comments="12" code="9" executable="0" executed="0" percent="0"/>
+          <methods count="0" tested="0" percent="0"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="0" tested="0" percent="0"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="HromovIndex.php" href="HromovIndex.php.xml">
+        <totals>
+          <lines total="41" comments="19" code="22" executable="5" executed="5" percent="100.00"/>
+          <methods count="2" tested="2" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="Index.php" href="Index.php.xml">
+        <totals>
+          <lines total="172" comments="65" code="107" executable="32" executed="28" percent="87.50"/>
+          <methods count="8" tested="5" percent="62.50"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="IndexInterface.php" href="IndexInterface.php.xml">
+        <totals>
+          <lines total="50" comments="31" code="19" executable="0" executed="0" percent="0"/>
+          <methods count="0" tested="0" percent="0"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="0" tested="0" percent="0"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="Register.php" href="Register.php.xml">
+        <totals>
+          <lines total="85" comments="44" code="41" executable="4" executed="4" percent="100.00"/>
+          <methods count="3" tested="3" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+    </directory>
+  </project>
+</phpunit>

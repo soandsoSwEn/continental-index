@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="SourceDataInterface.php" path="\data">
+    <totals>
+      <lines total="43" comments="32" code="11" executable="0" executed="0" percent="0"/>
+      <methods count="0" tested="0" percent="0"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="0" tested="0" percent="0"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Soandso</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ContinentalIndex</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Data</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="6">
+        <token name="T_DOC_COMMENT"> * Interface SourceDataInterface that must be implemented by the construction class of preparation</token>
+      </line>
+      <line no="7">
+        <token name="T_DOC_COMMENT"> * and generation of initial data</token>
+      </line>
+      <line no="8">
+        <token name="T_DOC_COMMENT"> *</token>
+      </line>
+      <line no="9">
+        <token name="T_DOC_COMMENT"> * @author Dmytriyenko Vyacheslav &lt;dmytriyenko.vyacheslav@gmail.com&gt;</token>
+      </line>
+      <line no="10">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="11">
+        <token name="T_INTERFACE">interface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">SourceDataInterface</token>
+      </line>
+      <line no="12">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="13">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="14">
+        <token name="T_DOC_COMMENT">     * Returns temperature amplitude data</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT">     * Array of returned data:</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">     * [Year, Amplitude Temperature]</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT">     * Example:</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT">     * [</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT">     *   [1978, 64.9],</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT">     *   [1979, 74],</token>
+      </line>
+      <line no="23">
+        <token name="T_DOC_COMMENT">     *   ..........</token>
+      </line>
+      <line no="24">
+        <token name="T_DOC_COMMENT">     * ]</token>
+      </line>
+      <line no="25">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="26">
+        <token name="T_DOC_COMMENT">     * @author Dmytriyenko Vyacheslav &lt;dmytriyenko.vyacheslav@gmail.com&gt;</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="28">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getAssimilateData</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="29"/>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="31">
+        <token name="T_DOC_COMMENT">     * Initializes and sets all initial data</token>
+      </line>
+      <line no="32">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="33">
+        <token name="T_DOC_COMMENT">     * @param string $inputType Input source type</token>
+      </line>
+      <line no="34">
+        <token name="T_DOC_COMMENT">     * @param array|string $source Input source</token>
+      </line>
+      <line no="35">
+        <token name="T_DOC_COMMENT">     * @param string $inputTempUnits Input temperature units</token>
+      </line>
+      <line no="36">
+        <token name="T_DOC_COMMENT">     * @param string $outputTempUnits Output temperature units</token>
+      </line>
+      <line no="37">
+        <token name="T_DOC_COMMENT">     * @param float $latitude Geographic latitude</token>
+      </line>
+      <line no="38">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="39">
+        <token name="T_DOC_COMMENT">     * @author Dmytriyenko Vyacheslav &lt;dmytriyenko.vyacheslav@gmail.com&gt;</token>
+      </line>
+      <line no="40">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="41">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">setInitData</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$inputType</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$source</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$inputTempUnits</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$outputTempUnits</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$latitude</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">void</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="42">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="43"/>
+    </source>
+  </file>
+</phpunit>
