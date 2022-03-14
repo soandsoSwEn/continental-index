@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1647266458">
+  <project timestamp="1647266458">
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\ContinentalIndexInterface.php">
+      <metrics loc="21" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\HromovIndex.php">
+      <class name="Soandso\ContinentalIndex\HromovIndex" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </class>
+      <line num="19" type="method" name="calcIndex" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="21" type="stmt" count="12"/>
+      <line num="31" type="method" name="getIndexAssets" visibility="public" complexity="2" crap="2" count="11"/>
+      <line num="33" type="stmt" count="11"/>
+      <line num="34" type="stmt" count="11"/>
+      <line num="35" type="stmt" count="11"/>
+      <line num="38" type="stmt" count="11"/>
+      <metrics loc="41" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\Index.php">
+      <class name="Soandso\ContinentalIndex\Index" namespace="global">
+        <metrics complexity="18" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="28" elements="40" coveredelements="33"/>
+      </class>
+      <line num="49" type="method" name="__construct" visibility="public" complexity="5" crap="5.03" count="18"/>
+      <line num="51" type="stmt" count="18"/>
+      <line num="52" type="stmt" count="17"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="17"/>
+      <line num="58" type="stmt" count="16"/>
+      <line num="60" type="stmt" count="1"/>
+      <line num="63" type="stmt" count="16"/>
+      <line num="64" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="16"/>
+      <line num="75" type="method" name="getIndexTypes" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="77" type="stmt" count="1"/>
+      <line num="85" type="method" name="getOutputFormats" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="87" type="stmt" count="1"/>
+      <line num="95" type="method" name="getFilePath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="97" type="stmt" count="1"/>
+      <line num="105" type="method" name="getFileOutput" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="107" type="stmt" count="1"/>
+      <line num="117" type="method" name="getIndexAssets" visibility="public" complexity="4" crap="4.03" count="10"/>
+      <line num="119" type="stmt" count="10"/>
+      <line num="121" type="stmt" count="10"/>
+      <line num="122" type="stmt" count="2"/>
+      <line num="123" type="stmt" count="8"/>
+      <line num="124" type="stmt" count="4"/>
+      <line num="125" type="stmt" count="4"/>
+      <line num="126" type="stmt" count="4"/>
+      <line num="128" type="stmt" count="0"/>
+      <line num="140" type="method" name="buildFileOutput" visibility="public" complexity="4" crap="4.13" count="3"/>
+      <line num="142" type="stmt" count="3"/>
+      <line num="143" type="stmt" count="0"/>
+      <line num="146" type="stmt" count="3"/>
+      <line num="147" type="stmt" count="3"/>
+      <line num="148" type="stmt" count="0"/>
+      <line num="151" type="stmt" count="3"/>
+      <line num="152" type="stmt" count="3"/>
+      <line num="153" type="stmt" count="3"/>
+      <line num="154" type="stmt" count="3"/>
+      <line num="157" type="stmt" count="3"/>
+      <line num="167" type="method" name="buildJsonOutput" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="169" type="stmt" count="5"/>
+      <metrics loc="172" ncloc="107" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="28" elements="40" coveredelements="33"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\IndexInterface.php">
+      <metrics loc="50" ncloc="19" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\Register.php">
+      <class name="Soandso\ContinentalIndex\Register" namespace="global">
+        <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+      </class>
+      <line num="51" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="53" type="stmt" count="8"/>
+      <line num="65" type="method" name="setData" visibility="protected" complexity="1" crap="1" count="8"/>
+      <line num="67" type="stmt" count="8"/>
+      <line num="79" type="method" name="getIndex" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="81" type="stmt" count="7"/>
+      <line num="82" type="stmt" count="5"/>
+      <metrics loc="85" ncloc="41" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\data\SourceData.php">
+      <class name="Soandso\ContinentalIndex\Data\SourceData" namespace="global">
+        <metrics complexity="49" methods="23" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="79" coveredstatements="73" elements="102" coveredelements="91"/>
+      </class>
+      <line num="54" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="72"/>
+      <line num="56" type="stmt" count="72"/>
+      <line num="64" type="method" name="getInputType" visibility="public" complexity="1" crap="1" count="72"/>
+      <line num="66" type="stmt" count="72"/>
+      <line num="74" type="method" name="getSource" visibility="public" complexity="1" crap="1" count="26"/>
+      <line num="76" type="stmt" count="26"/>
+      <line num="84" type="method" name="getInputTempUnits" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="86" type="stmt" count="4"/>
+      <line num="92" type="method" name="getOutputTempUnits" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="94" type="stmt" count="4"/>
+      <line num="102" type="method" name="getLatitude" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="104" type="stmt" count="7"/>
+      <line num="113" type="method" name="setInputType" visibility="public" complexity="2" crap="2" count="72"/>
+      <line num="115" type="stmt" count="72"/>
+      <line num="116" type="stmt" count="72"/>
+      <line num="118" type="stmt" count="1"/>
+      <line num="126" type="method" name="setSource" visibility="public" complexity="2" crap="2" count="72"/>
+      <line num="128" type="stmt" count="72"/>
+      <line num="129" type="stmt" count="72"/>
+      <line num="131" type="stmt" count="3"/>
+      <line num="141" type="method" name="setTempUnits" visibility="public" complexity="3" crap="3.04" count="72"/>
+      <line num="143" type="stmt" count="72"/>
+      <line num="144" type="stmt" count="72"/>
+      <line num="146" type="stmt" count="1"/>
+      <line num="149" type="stmt" count="72"/>
+      <line num="150" type="stmt" count="72"/>
+      <line num="152" type="stmt" count="0"/>
+      <line num="162" type="method" name="setLatitude" visibility="public" complexity="2" crap="2" count="72"/>
+      <line num="164" type="stmt" count="72"/>
+      <line num="165" type="stmt" count="72"/>
+      <line num="167" type="stmt" count="1"/>
+      <line num="179" type="method" name="getAssimilateData" visibility="public" complexity="2" crap="2" count="11"/>
+      <line num="181" type="stmt" count="11"/>
+      <line num="182" type="stmt" count="11"/>
+      <line num="183" type="stmt" count="3"/>
+      <line num="186" type="stmt" count="8"/>
+      <line num="195" type="method" name="checkInputType" visibility="protected" complexity="1" crap="1" count="72"/>
+      <line num="197" type="stmt" count="72"/>
+      <line num="206" type="method" name="checkSource" visibility="protected" complexity="2" crap="2" count="72"/>
+      <line num="208" type="stmt" count="72"/>
+      <line num="209" type="stmt" count="14"/>
+      <line num="211" type="stmt" count="69"/>
+      <line num="221" type="method" name="checkTempUnits" visibility="protected" complexity="1" crap="1" count="72"/>
+      <line num="223" type="stmt" count="72"/>
+      <line num="232" type="method" name="checkLatitude" visibility="public" complexity="2" crap="2" count="72"/>
+      <line num="234" type="stmt" count="72"/>
+      <line num="270" type="method" name="setInitData" visibility="public" complexity="1" crap="1" count="72"/>
+      <line num="272" type="stmt" count="72"/>
+      <line num="273" type="stmt" count="72"/>
+      <line num="274" type="stmt" count="72"/>
+      <line num="275" type="stmt" count="72"/>
+      <line num="284" type="method" name="getTempAmplitudeData" visibility="public" complexity="4" crap="4.05" count="17"/>
+      <line num="286" type="stmt" count="17"/>
+      <line num="287" type="stmt" count="5"/>
+      <line num="288" type="stmt" count="12"/>
+      <line num="289" type="stmt" count="6"/>
+      <line num="290" type="stmt" count="6"/>
+      <line num="291" type="stmt" count="6"/>
+      <line num="293" type="stmt" count="0"/>
+      <line num="303" type="method" name="getSourceFromFile" visibility="protected" complexity="5" crap="5.07" count="7"/>
+      <line num="305" type="stmt" count="7"/>
+      <line num="306" type="stmt" count="7"/>
+      <line num="307" type="stmt" count="0"/>
+      <line num="310" type="stmt" count="7"/>
+      <line num="311" type="stmt" count="7"/>
+      <line num="312" type="stmt" count="4"/>
+      <line num="313" type="stmt" count="4"/>
+      <line num="314" type="stmt" count="0"/>
+      <line num="317" type="stmt" count="4"/>
+      <line num="318" type="stmt" count="4"/>
+      <line num="321" type="stmt" count="7"/>
+      <line num="323" type="stmt" count="7"/>
+      <line num="324" type="stmt" count="4"/>
+      <line num="326" type="stmt" count="3"/>
+      <line num="336" type="method" name="getSourceFromArray" visibility="protected" complexity="4" crap="4.03" count="8"/>
+      <line num="338" type="stmt" count="8"/>
+      <line num="339" type="stmt" count="3"/>
+      <line num="342" type="stmt" count="5"/>
+      <line num="344" type="stmt" count="5"/>
+      <line num="345" type="stmt" count="5"/>
+      <line num="348" type="stmt" count="5"/>
+      <line num="349" type="stmt" count="5"/>
+      <line num="351" type="stmt" count="0"/>
+      <line num="360" type="method" name="getSourceFromJson" visibility="protected" complexity="2" crap="2" count="8"/>
+      <line num="362" type="stmt" count="8"/>
+      <line num="364" type="stmt" count="8"/>
+      <line num="365" type="stmt" count="5"/>
+      <line num="367" type="stmt" count="3"/>
+      <line num="382" type="method" name="convertTemperature" visibility="protected" complexity="8" crap="8.09" count="13"/>
+      <line num="384" type="stmt" count="13"/>
+      <line num="385" type="stmt" count="1"/>
+      <line num="388" type="stmt" count="12"/>
+      <line num="389" type="stmt" count="9"/>
+      <line num="392" type="stmt" count="3"/>
+      <line num="393" type="stmt" count="2"/>
+      <line num="394" type="stmt" count="1"/>
+      <line num="395" type="stmt" count="1"/>
+      <line num="397" type="stmt" count="0"/>
+      <line num="409" type="method" name="convertFromFtoC" visibility="private" complexity="1" crap="1" count="4"/>
+      <line num="411" type="stmt" count="4"/>
+      <line num="422" type="method" name="convertFromCtoF" visibility="private" complexity="1" crap="1" count="3"/>
+      <line num="424" type="stmt" count="3"/>
+      <metrics loc="427" ncloc="240" classes="1" methods="23" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="79" coveredstatements="73" elements="102" coveredelements="91"/>
+    </file>
+    <file name="C:\OpenServerPanel\domains\continental-index.local\src\data\SourceDataInterface.php">
+      <metrics loc="43" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="7" loc="839" ncloc="449" classes="4" methods="36" coveredmethods="28" conditionals="0" coveredconditionals="0" statements="120" coveredstatements="110" elements="156" coveredelements="138"/>
+  </project>
+</coverage>
