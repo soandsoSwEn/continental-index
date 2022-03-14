@@ -28,8 +28,10 @@
         "php": "^7.4"
     },
     "require-dev": {
+        "dealer-teamwork/codacy-coverage": "dev-master",
         "mikey179/vfsstream": "2.0.x-dev",
         "mockery/mockery": "^1.5",
+        "phpunit/php-code-coverage": "9.2.x-dev",
         "phpunit/phpunit": "9.5.x-dev"
     }
 }
