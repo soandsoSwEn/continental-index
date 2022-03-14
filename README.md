@@ -1,10 +1,12 @@
 [![License](http://poser.pugx.org/soandso/continental-index/license)](https://packagist.org/packages/soandso/continental-index)
 [![Version](http://poser.pugx.org/soandso/continental-index/version)](https://packagist.org/packages/soandso/continental-index)
+![Codacy grade](https://img.shields.io/codacy/grade/ee8816be877c49d9af92dc1531d968e3)
 [![PHP Version Require](http://poser.pugx.org/soandso/continental-index/require/php)](https://packagist.org/packages/soandso/continental-index)
 ![GitHub top language](https://img.shields.io/github/languages/top/soandsoSwEn/continental-index)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/soandsoSwEn/continental-index)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/soandsoSwEn/continental-index/main)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/soandsoSwEn/continental-index)
 ![GitHub Release Date](https://img.shields.io/github/release-date/soandsoSwEn/continental-index)
+![Codacy branch coverage](https://img.shields.io/codacy/coverage/ee8816be877c49d9af92dc1531d968e3/main)
 
 Continental index
 ========================================
