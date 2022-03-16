@@ -6,6 +6,7 @@ use bovigo\vfs\vfsStream;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use Soandso\ContinentalIndex\Data\SourceData;
+use Soandso\ContinentalIndex\GorchinskyIndex;
 use Soandso\ContinentalIndex\HromovIndex;
 use Soandso\ContinentalIndex\Index;
 
@@ -33,6 +34,7 @@ class IndexTest extends TestCase
     {
         $actual = [
             'hromov' => HromovIndex::class,
+            'gorchinsky' => GorchinskyIndex::class,
         ];
 
         $this->assertEquals($this->index->getIndexTypes(), $actual);
@@ -54,9 +56,26 @@ class IndexTest extends TestCase
         $this->assertEquals($this->index->getFilePath(), $actual);
     }
 
-    public function testGetFileOutput()
+    public function testGetFileOutputForHromovIndex()
     {
-        $actual = 'continental_indices.txt';
+        $actual = 'hromov_continental_indices.txt';
+
+        $reflector = new \ReflectionClass(Index::class);
+        $method = $reflector->getMethod('setFileOutput');
+        $method->setAccessible(true);
+        $result = $method->invokeArgs($this->index, ['hromov']);
+
+        $this->assertEquals($this->index->getFileOutput(), $actual);
+    }
+
+    public function testGetFileOutputForGorchinskyIndex()
+    {
+        $actual = 'gorchinsky_continental_indices.txt';
+
+        $reflector = new \ReflectionClass(Index::class);
+        $method = $reflector->getMethod('setFileOutput');
+        $method->setAccessible(true);
+        $result = $method->invokeArgs($this->index, ['gorchinsky']);
 
         $this->assertEquals($this->index->getFileOutput(), $actual);
     }

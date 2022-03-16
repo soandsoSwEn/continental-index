@@ -17,6 +17,7 @@ class Index implements IndexInterface
      */
     private $indices = [
         'hromov' => HromovIndex::class,
+        'gorchinsky' => GorchinskyIndex::class,
     ];
 
     /**
@@ -32,9 +33,14 @@ class Index implements IndexInterface
     private $filePath;
 
     /**
+     * @var string Result Record File Template of calculating the continentality index
+     */
+    private $fileOutputTempalte = 'continental_indices.txt';
+
+    /**
      * @var string file name of the record file for the results of calculating the continentality index
      */
-    private $fileOutput = 'continental_indices.txt';
+    private $fileOutput;
 
     /**
      * @var string Output format of the result of calculating the continentality index
@@ -50,6 +56,7 @@ class Index implements IndexInterface
     {
         if (array_key_exists($title, $this->indices)) {
             $this->index = new $this->indices[$title];
+            $this->setFileOutput($title);
         } else {
             throw new Exception('Specified continentality index is not supported');
         }
@@ -65,6 +72,16 @@ class Index implements IndexInterface
         } else {
             $this->filePath = $filePath;
         }
+    }
+
+    /**
+     * Sets the name of the file for the results of calculating the continentality index
+     *
+     * @param string $indexTitle Continentality index title
+     */
+    protected function setFileOutput(string $indexTitle) : void
+    {
+        $this->fileOutput = $indexTitle . '_' . $this->fileOutputTempalte;
     }
 
     /**

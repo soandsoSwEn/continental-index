@@ -19,6 +19,11 @@ class Register
     const HROMOV_INDEX = 'hromov';
 
     /**
+     * Gorchinsky index title
+     */
+    const GORCHINSKY_INDEX = 'gorchinsky';
+
+    /**
      * Fahrenheit title
      */
     const FAHRENHEIT = 'F';
