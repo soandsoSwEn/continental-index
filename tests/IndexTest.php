@@ -5,6 +5,7 @@ namespace Soandso\ContinentalIndex\Tests;
 use bovigo\vfs\vfsStream;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use Soandso\ContinentalIndex\ConradIndex;
 use Soandso\ContinentalIndex\Data\SourceData;
 use Soandso\ContinentalIndex\GorchinskyIndex;
 use Soandso\ContinentalIndex\HromovIndex;
@@ -35,6 +36,7 @@ class IndexTest extends TestCase
         $actual = [
             'hromov' => HromovIndex::class,
             'gorchinsky' => GorchinskyIndex::class,
+            'conrad' => ConradIndex::class,
         ];
 
         $this->assertEquals($this->index->getIndexTypes(), $actual);

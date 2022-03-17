@@ -24,6 +24,11 @@ class Register
     const GORCHINSKY_INDEX = 'gorchinsky';
 
     /**
+     * Conrad index title
+     */
+    const CONRAD_INDEX = 'conrad';
+
+    /**
      * Fahrenheit title
      */
     const FAHRENHEIT = 'F';

@@ -18,6 +18,7 @@ class Index implements IndexInterface
     private $indices = [
         'hromov' => HromovIndex::class,
         'gorchinsky' => GorchinskyIndex::class,
+        'conrad' => ConradIndex::class,
     ];
 
     /**
