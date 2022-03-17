@@ -32,7 +32,7 @@ class IndexTest extends TestCase
         Mockery::close();
     }
 
-    public function testGetIndexTypes()
+    public function testSuccessGetIndexTypes()
     {
         $actual = [
             'hromov' => HromovIndex::class,
@@ -42,6 +42,19 @@ class IndexTest extends TestCase
         ];
 
         $this->assertEquals($this->index->getIndexTypes(), $actual);
+    }
+
+    public function testErrorGetIndexTypes()
+    {
+        $actual = [
+            'hromov' => HromovIndex::class,
+            'gorchinsky' => GorchinskyIndex::class,
+            'conrad' => ConradIndex::class,
+            'zenker' => ZenkerIndex::class,
+            'zmethod' => ZenkerIndex::class,
+        ];
+
+        $this->assertNotEquals($this->index->getIndexTypes(), $actual);
     }
 
     public function testGetOutputFormats()
