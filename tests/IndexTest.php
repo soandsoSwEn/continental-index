@@ -10,6 +10,7 @@ use Soandso\ContinentalIndex\Data\SourceData;
 use Soandso\ContinentalIndex\GorchinskyIndex;
 use Soandso\ContinentalIndex\HromovIndex;
 use Soandso\ContinentalIndex\Index;
+use Soandso\ContinentalIndex\ZenkerIndex;
 
 class IndexTest extends TestCase
 {
@@ -37,6 +38,7 @@ class IndexTest extends TestCase
             'hromov' => HromovIndex::class,
             'gorchinsky' => GorchinskyIndex::class,
             'conrad' => ConradIndex::class,
+            'zenker' => ZenkerIndex::class,
         ];
 
         $this->assertEquals($this->index->getIndexTypes(), $actual);

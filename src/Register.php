@@ -29,6 +29,11 @@ class Register
     const CONRAD_INDEX = 'conrad';
 
     /**
+     * Zenker index title
+     */
+    const ZENKER_INDEX = 'zenker';
+
+    /**
      * Fahrenheit title
      */
     const FAHRENHEIT = 'F';

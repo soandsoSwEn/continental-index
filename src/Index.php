@@ -19,6 +19,7 @@ class Index implements IndexInterface
         'hromov' => HromovIndex::class,
         'gorchinsky' => GorchinskyIndex::class,
         'conrad' => ConradIndex::class,
+        'zenker' => ZenkerIndex::class,
     ];
 
     /**
