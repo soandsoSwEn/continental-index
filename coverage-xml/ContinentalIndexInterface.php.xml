@@ -59,7 +59,7 @@
         <token name="T_DOC_COMMENT">     * @param float $tempAmplitude Temperature amplitude value</token>
       </line>
       <line no="16">
-        <token name="T_DOC_COMMENT">     * @param float $longitude The value of geographic latitude</token>
+        <token name="T_DOC_COMMENT">     * @param float $latitude The value of geographic latitude</token>
       </line>
       <line no="17">
         <token name="T_DOC_COMMENT">     * @return float</token>
@@ -82,7 +82,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">float</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$longitude</token>
+        <token name="T_VARIABLE">$latitude</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_COLON">:</token>

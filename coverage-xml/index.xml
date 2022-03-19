@@ -1,17 +1,29 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Mon Mar 14 16:55:11 MSK 2022" phpunit="9.5.18" coverage="9.2.15">
+  <build time="Sat Mar 19 19:25:37 MSK 2022" phpunit="9.5.18" coverage="9.2.15">
     <runtime name="PHP" version="7.4.5" url="https://secure.php.net/"/>
     <driver name="xdebug" version="2.9.4"/>
   </build>
   <project source="C:\OpenServerPanel\domains\continental-index.local\src">
     <tests>
-      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testCalcIndex" size="unknown" result="0" status="PASSED"/>
-      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testGetIndexAssets" size="unknown" result="0" status="PASSED"/>
-      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes" size="unknown" result="0" status="PASSED"/>
+      <test name="ConradIndexTest::testSuccessCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="ConradIndexTest::testErrorCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="ConradIndexTest::testSuccessGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="ConradIndexTest::testErrorGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="GorchinskyIndexTest::testSuccessCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="GorchinskyIndexTest::testErrorCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="GorchinskyIndexTest::testSuccessGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="GorchinskyIndexTest::testErrorGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testSuccessCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testErrorCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testSuccessGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\HromovIndexTest::testErrorGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath" size="unknown" result="0" status="PASSED"/>
-      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile" size="unknown" result="0" status="PASSED"/>
@@ -27,6 +39,10 @@
       <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource" size="unknown" result="0" status="PASSED"/>
+      <test name="ZenkerIndexTest::testSuccessCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="ZenkerIndexTest::testErrorCalcIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="ZenkerIndexTest::testSuccessGetIndexAssets" size="unknown" result="0" status="PASSED"/>
+      <test name="ZenkerIndexTest::testErrorGetIndexAssets" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputArrayType" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputFileType" size="unknown" result="0" status="PASSED"/>
       <test name="Soandso\ContinentalIndex\Tests\Data\SourceDataTest::testSuccessSetInputJsonType" size="unknown" result="0" status="PASSED"/>
@@ -94,10 +110,10 @@
     </tests>
     <directory name="/">
       <totals>
-        <lines total="839" comments="390" code="449" executable="120" executed="110" percent="91.67"/>
-        <methods count="36" tested="28" percent="77.78"/>
+        <lines total="995" comments="466" code="529" executable="137" executed="127" percent="92.70"/>
+        <methods count="43" tested="35" percent="81.40"/>
         <functions count="0" tested="0" percent="0"/>
-        <classes count="4" tested="2" percent="50.00"/>
+        <classes count="7" tested="5" percent="71.43"/>
         <traits count="0" tested="0" percent="0"/>
       </totals>
       <directory name="data">
@@ -127,12 +143,30 @@
           </totals>
         </file>
       </directory>
+      <file name="ConradIndex.php" href="ConradIndex.php.xml">
+        <totals>
+          <lines total="41" comments="20" code="21" executable="5" executed="5" percent="100.00"/>
+          <methods count="2" tested="2" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
       <file name="ContinentalIndexInterface.php" href="ContinentalIndexInterface.php.xml">
         <totals>
           <lines total="21" comments="12" code="9" executable="0" executed="0" percent="0"/>
           <methods count="0" tested="0" percent="0"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="0" tested="0" percent="0"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="GorchinskyIndex.php" href="GorchinskyIndex.php.xml">
+        <totals>
+          <lines total="40" comments="19" code="21" executable="5" executed="5" percent="100.00"/>
+          <methods count="2" tested="2" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
           <traits count="0" tested="0" percent="0"/>
         </totals>
       </file>
@@ -147,8 +181,8 @@
       </file>
       <file name="Index.php" href="Index.php.xml">
         <totals>
-          <lines total="172" comments="65" code="107" executable="32" executed="28" percent="87.50"/>
-          <methods count="8" tested="5" percent="62.50"/>
+          <lines total="191" comments="73" code="118" executable="34" executed="30" percent="88.24"/>
+          <methods count="9" tested="6" percent="66.67"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="0" percent="0.00"/>
           <traits count="0" tested="0" percent="0"/>
@@ -165,8 +199,17 @@
       </file>
       <file name="Register.php" href="Register.php.xml">
         <totals>
-          <lines total="85" comments="44" code="41" executable="4" executed="4" percent="100.00"/>
+          <lines total="100" comments="53" code="47" executable="4" executed="4" percent="100.00"/>
           <methods count="3" tested="3" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="ZenkerIndex.php" href="ZenkerIndex.php.xml">
+        <totals>
+          <lines total="41" comments="20" code="21" executable="5" executed="5" percent="100.00"/>
+          <methods count="2" tested="2" percent="100.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="1" percent="100.00"/>
           <traits count="0" tested="0" percent="0"/>

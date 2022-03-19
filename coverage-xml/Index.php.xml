@@ -2,29 +2,32 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Index.php" path="\">
     <totals>
-      <lines total="172" comments="65" code="107" executable="32" executed="28" percent="87.50"/>
-      <methods count="8" tested="5" percent="62.50"/>
+      <lines total="191" comments="73" code="118" executable="34" executed="30" percent="88.24"/>
+      <methods count="9" tested="6" percent="66.67"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Soandso\ContinentalIndex\Index" start="13" executable="32" executed="28" crap="18.63">
+    <class name="Soandso\ContinentalIndex\Index" start="13" executable="34" executed="30" crap="19.59">
       <namespace name="Soandso\ContinentalIndex"/>
-      <method name="__construct" signature="__construct($title, $format, $filePath)" start="49" end="68" crap="5.03" executable="9" executed="8" coverage="88.888888888889"/>
-      <method name="getIndexTypes" signature="getIndexTypes(): array" start="75" end="78" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="getOutputFormats" signature="getOutputFormats(): array" start="85" end="88" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="getFilePath" signature="getFilePath(): string" start="95" end="98" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="getFileOutput" signature="getFileOutput(): string" start="105" end="108" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="getIndexAssets" signature="getIndexAssets(Soandso\ContinentalIndex\Data\SourceDataInterface $source)" start="117" end="130" crap="4.03" executable="8" executed="7" coverage="87.5"/>
-      <method name="buildFileOutput" signature="buildFileOutput($indexAssets): bool" start="140" end="158" crap="4.13" executable="10" executed="8" coverage="80"/>
-      <method name="buildJsonOutput" signature="buildJsonOutput($indexAssets): string" start="167" end="170" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="__construct" signature="__construct($title, $format, $filePath)" start="57" end="77" crap="5.03" executable="10" executed="9" coverage="90"/>
+      <method name="setFileOutput" signature="setFileOutput(string $indexTitle): void" start="84" end="87" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getIndexTypes" signature="getIndexTypes(): array" start="94" end="97" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getOutputFormats" signature="getOutputFormats(): array" start="104" end="107" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getFilePath" signature="getFilePath(): string" start="114" end="117" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getFileOutput" signature="getFileOutput(): string" start="124" end="127" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getIndexAssets" signature="getIndexAssets(Soandso\ContinentalIndex\Data\SourceDataInterface $source)" start="136" end="149" crap="4.03" executable="8" executed="7" coverage="87.5"/>
+      <method name="buildFileOutput" signature="buildFileOutput($indexAssets): bool" start="159" end="177" crap="4.13" executable="10" executed="8" coverage="80"/>
+      <method name="buildJsonOutput" signature="buildJsonOutput($indexAssets): string" start="186" end="189" crap="1" executable="1" executed="1" coverage="100"/>
     </class>
     <coverage>
-      <line nr="51">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
+      <line nr="59">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
@@ -36,95 +39,83 @@
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="52">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="54">
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
-      </line>
-      <line nr="57">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="58">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
       </line>
       <line nr="60">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="61">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
       </line>
       <line nr="63">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
       </line>
       <line nr="66">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="67">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
@@ -138,115 +129,181 @@
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
       </line>
-      <line nr="77">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexTypes"/>
+      <line nr="69">
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
       </line>
-      <line nr="87">
+      <line nr="72">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="75">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="86">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="96">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testSuccessGetIndexTypes"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexTypes"/>
+      </line>
+      <line nr="106">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetOutputFormats"/>
       </line>
-      <line nr="97">
+      <line nr="116">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFilePath"/>
       </line>
-      <line nr="107">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutput"/>
-      </line>
-      <line nr="119">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="121">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="122">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-      </line>
-      <line nr="123">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="124">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-      </line>
-      <line nr="125">
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
       <line nr="126">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForHromovIndex"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetFileOutputForGorchinskyIndex"/>
+      </line>
+      <line nr="138">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="140">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="141">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
       <line nr="142">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="143">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForArray"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+      </line>
+      <line nr="144">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="145">
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="161">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="146">
+      <line nr="165">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="147">
+      <line nr="166">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="151">
+      <line nr="170">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="152">
+      <line nr="171">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="153">
+      <line nr="172">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="154">
+      <line nr="173">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="157">
+      <line nr="176">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildFileOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForFile"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
       </line>
-      <line nr="169">
+      <line nr="188">
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testBuildJsonOutput"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testGetIndexAssetsForJson"/>
         <covered by="Soandso\ContinentalIndex\Tests\IndexTest::testErrorGetIndexAssetsForJson"/>
@@ -346,22 +403,55 @@
         <token name="T_COMMA">,</token>
       </line>
       <line no="20">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'gorchinsky'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">GorchinskyIndex</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="21">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'conrad'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ConradIndex</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'zenker'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ZenkerIndex</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="23">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="21"/>
-      <line no="22">
+      <line no="24"/>
+      <line no="25">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="23">
+      <line no="26">
         <token name="T_DOC_COMMENT">     * @var string[] Supported output formats</token>
       </line>
-      <line no="24">
+      <line no="27">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="25">
+      <line no="28">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
@@ -373,7 +463,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="26">
+      <line no="29">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'file'</token>
         <token name="T_COMMA">,</token>
@@ -384,89 +474,107 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'json'</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="27">
+      <line no="30">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="28"/>
-      <line no="29">
+      <line no="31"/>
+      <line no="32">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="30">
+      <line no="33">
         <token name="T_DOC_COMMENT">     * @var string directory for recording the results of calculating the continentality index</token>
       </line>
-      <line no="31">
+      <line no="34">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="32">
+      <line no="35">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$filePath</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="33"/>
-      <line no="34">
+      <line no="36"/>
+      <line no="37">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="35">
-        <token name="T_DOC_COMMENT">     * @var string file name of the record file for the results of calculating the continentality index</token>
+      <line no="38">
+        <token name="T_DOC_COMMENT">     * @var string Result Record File Template of calculating the continentality index</token>
       </line>
-      <line no="36">
+      <line no="39">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="37">
+      <line no="40">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$fileOutput</token>
+        <token name="T_VARIABLE">$fileOutputTempalte</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'continental_indices.txt'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="38"/>
-      <line no="39">
+      <line no="41"/>
+      <line no="42">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="40">
-        <token name="T_DOC_COMMENT">     * @var string Output format of the result of calculating the continentality index</token>
+      <line no="43">
+        <token name="T_DOC_COMMENT">     * @var string file name of the record file for the results of calculating the continentality index</token>
       </line>
-      <line no="41">
+      <line no="44">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="42">
+      <line no="45">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$fileOutput</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="46"/>
+      <line no="47">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="48">
+        <token name="T_DOC_COMMENT">     * @var string Output format of the result of calculating the continentality index</token>
+      </line>
+      <line no="49">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="50">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$format</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="43"/>
-      <line no="44">
+      <line no="51"/>
+      <line no="52">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="45">
+      <line no="53">
         <token name="T_DOC_COMMENT">     * @var ContinentalIndexInterface Object of continentality index type</token>
       </line>
-      <line no="46">
+      <line no="54">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="47">
+      <line no="55">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$index</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="48"/>
-      <line no="49">
+      <line no="56"/>
+      <line no="57">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -487,11 +595,11 @@
         <token name="T_STRING">null</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="50">
+      <line no="58">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="51">
+      <line no="59">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -509,7 +617,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="52">
+      <line no="60">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -527,7 +635,17 @@
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="53">
+      <line no="61">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">setFileOutput</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$title</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="62">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -535,7 +653,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="54">
+      <line no="63">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -547,12 +665,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="55">
+      <line no="64">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="56"/>
-      <line no="57">
+      <line no="65"/>
+      <line no="66">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -570,7 +688,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="58">
+      <line no="67">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -581,7 +699,7 @@
         <token name="T_VARIABLE">$format</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="59">
+      <line no="68">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -589,7 +707,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="60">
+      <line no="69">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -601,12 +719,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="61">
+      <line no="70">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="62"/>
-      <line no="63">
+      <line no="71"/>
+      <line no="72">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -633,7 +751,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="64">
+      <line no="73">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -645,7 +763,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="65">
+      <line no="74">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -653,7 +771,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="66">
+      <line no="75">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -664,32 +782,95 @@
         <token name="T_VARIABLE">$filePath</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="67">
+      <line no="76">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="68">
+      <line no="77">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="69"/>
-      <line no="70">
+      <line no="78"/>
+      <line no="79">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="71">
-        <token name="T_DOC_COMMENT">     * Returns all supported continental index types</token>
+      <line no="80">
+        <token name="T_DOC_COMMENT">     * Sets the name of the file for the results of calculating the continentality index</token>
       </line>
-      <line no="72">
+      <line no="81">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="73">
-        <token name="T_DOC_COMMENT">     * @return string[] Continental index types</token>
+      <line no="82">
+        <token name="T_DOC_COMMENT">     * @param string $indexTitle Continentality index title</token>
       </line>
-      <line no="74">
+      <line no="83">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="75">
+      <line no="84">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">setFileOutput</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$indexTitle</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">void</token>
+      </line>
+      <line no="85">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="86">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">fileOutput</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$indexTitle</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOT">.</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'_'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOT">.</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">fileOutputTempalte</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="87">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="88"/>
+      <line no="89">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="90">
+        <token name="T_DOC_COMMENT">     * Returns all supported continental index types</token>
+      </line>
+      <line no="91">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="92">
+        <token name="T_DOC_COMMENT">     * @return string[] Continental index types</token>
+      </line>
+      <line no="93">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="94">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -702,11 +883,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_ARRAY">array</token>
       </line>
-      <line no="76">
+      <line no="95">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="77">
+      <line no="96">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -715,28 +896,28 @@
         <token name="T_STRING">indices</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="78">
+      <line no="97">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="79"/>
-      <line no="80">
+      <line no="98"/>
+      <line no="99">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="81">
+      <line no="100">
         <token name="T_DOC_COMMENT">     * Returns all output formats of the result of calculating the continentality index</token>
       </line>
-      <line no="82">
+      <line no="101">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="83">
+      <line no="102">
         <token name="T_DOC_COMMENT">     * @return string[] Output formats of the result of calculating the continentality index</token>
       </line>
-      <line no="84">
+      <line no="103">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="85">
+      <line no="104">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -749,11 +930,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_ARRAY">array</token>
       </line>
-      <line no="86">
+      <line no="105">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="87">
+      <line no="106">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -762,28 +943,28 @@
         <token name="T_STRING">outputFormats</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="88">
+      <line no="107">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="89"/>
-      <line no="90">
+      <line no="108"/>
+      <line no="109">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="91">
+      <line no="110">
         <token name="T_DOC_COMMENT">     * Returns the directory for recording the results of calculating the continentality index</token>
       </line>
-      <line no="92">
+      <line no="111">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="93">
+      <line no="112">
         <token name="T_DOC_COMMENT">     * @return string the directory for recording the results of continentality index</token>
       </line>
-      <line no="94">
+      <line no="113">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="95">
+      <line no="114">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -796,11 +977,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">string</token>
       </line>
-      <line no="96">
+      <line no="115">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="97">
+      <line no="116">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -809,28 +990,28 @@
         <token name="T_STRING">filePath</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="98">
+      <line no="117">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="99"/>
-      <line no="100">
+      <line no="118"/>
+      <line no="119">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="101">
+      <line no="120">
         <token name="T_DOC_COMMENT">     * Returns the name of the record file for the results of calculating the continentality index</token>
       </line>
-      <line no="102">
+      <line no="121">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="103">
+      <line no="122">
         <token name="T_DOC_COMMENT">     * @return string File name for the results of continentality index</token>
       </line>
-      <line no="104">
+      <line no="123">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="105">
+      <line no="124">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -843,11 +1024,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">string</token>
       </line>
-      <line no="106">
+      <line no="125">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="107">
+      <line no="126">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -856,34 +1037,34 @@
         <token name="T_STRING">fileOutput</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="108">
+      <line no="127">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="109"/>
-      <line no="110">
+      <line no="128"/>
+      <line no="129">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="111">
+      <line no="130">
         <token name="T_DOC_COMMENT">     * Returns the result of calculating the continence index in the back format, which is in the $source object</token>
       </line>
-      <line no="112">
+      <line no="131">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="113">
+      <line no="132">
         <token name="T_DOC_COMMENT">     * @param SourceDataInterface $source Class object for working with source data</token>
       </line>
-      <line no="114">
+      <line no="133">
         <token name="T_DOC_COMMENT">     * @return array|bool|string</token>
       </line>
-      <line no="115">
+      <line no="134">
         <token name="T_DOC_COMMENT">     * @throws Exception</token>
       </line>
-      <line no="116">
+      <line no="135">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="117">
+      <line no="136">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -896,11 +1077,11 @@
         <token name="T_VARIABLE">$source</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="118">
+      <line no="137">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="119">
+      <line no="138">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$indexAssets</token>
         <token name="T_WHITESPACE"> </token>
@@ -927,8 +1108,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="120"/>
-      <line no="121">
+      <line no="139"/>
+      <line no="140">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -950,7 +1131,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="122">
+      <line no="141">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -962,7 +1143,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="123">
+      <line no="142">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -986,14 +1167,14 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="124">
+      <line no="143">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$indexAssets</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="125">
+      <line no="144">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -1017,7 +1198,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="126">
+      <line no="145">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1029,7 +1210,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="127">
+      <line no="146">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -1037,48 +1218,48 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="128">
+      <line no="147">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="129">
+      <line no="148">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="130">
+      <line no="149">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="131"/>
-      <line no="132">
+      <line no="150"/>
+      <line no="151">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="133">
+      <line no="152">
         <token name="T_DOC_COMMENT">     * Building a file of continentality index results</token>
       </line>
-      <line no="134">
+      <line no="153">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="135">
+      <line no="154">
         <token name="T_DOC_COMMENT">     * array[year, continentality Index]</token>
       </line>
-      <line no="136">
+      <line no="155">
         <token name="T_DOC_COMMENT">     * @param array $indexAssets Continentality Index Data (see above)</token>
       </line>
-      <line no="137">
+      <line no="156">
         <token name="T_DOC_COMMENT">     * @return bool</token>
       </line>
-      <line no="138">
+      <line no="157">
         <token name="T_DOC_COMMENT">     * @throws Exception</token>
       </line>
-      <line no="139">
+      <line no="158">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="140">
+      <line no="159">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -1093,11 +1274,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">bool</token>
       </line>
-      <line no="141">
+      <line no="160">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="142">
+      <line no="161">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1116,7 +1297,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="143">
+      <line no="162">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -1128,12 +1309,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="144">
+      <line no="163">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="145"/>
-      <line no="146">
+      <line no="164"/>
+      <line no="165">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$fileOutput</token>
         <token name="T_WHITESPACE"> </token>
@@ -1160,7 +1341,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="147">
+      <line no="166">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1174,7 +1355,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="148">
+      <line no="167">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -1186,12 +1367,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="149">
+      <line no="168">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="150"/>
-      <line no="151">
+      <line no="169"/>
+      <line no="170">
         <token name="T_WHITESPACE">        </token>
         <token name="T_FOREACH">foreach</token>
         <token name="T_WHITESPACE"> </token>
@@ -1205,7 +1386,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="152">
+      <line no="171">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$line</token>
         <token name="T_WHITESPACE"> </token>
@@ -1232,7 +1413,7 @@
         <token name="T_STRING">PHP_EOL</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="153">
+      <line no="172">
         <token name="T_WHITESPACE">            </token>
         <token name="T_STRING">fseek</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -1246,7 +1427,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="154">
+      <line no="173">
         <token name="T_WHITESPACE">            </token>
         <token name="T_STRING">fwrite</token>
         <token name="T_OPEN_BRACKET">(</token>
@@ -1257,12 +1438,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="155">
+      <line no="174">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="156"/>
-      <line no="157">
+      <line no="175"/>
+      <line no="176">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1272,34 +1453,34 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="158">
+      <line no="177">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="159"/>
-      <line no="160">
+      <line no="178"/>
+      <line no="179">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="161">
+      <line no="180">
         <token name="T_DOC_COMMENT">     * Returns an array of continentality index data in json format</token>
       </line>
-      <line no="162">
+      <line no="181">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="163">
+      <line no="182">
         <token name="T_DOC_COMMENT">     * array[year, continentality Index]</token>
       </line>
-      <line no="164">
+      <line no="183">
         <token name="T_DOC_COMMENT">     * @param array $indexAssets Continentality Index Data (see above)</token>
       </line>
-      <line no="165">
+      <line no="184">
         <token name="T_DOC_COMMENT">     * @return string</token>
       </line>
-      <line no="166">
+      <line no="185">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="167">
+      <line no="186">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -1314,11 +1495,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">string</token>
       </line>
-      <line no="168">
+      <line no="187">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="169">
+      <line no="188">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1328,14 +1509,14 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="170">
+      <line no="189">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="171">
+      <line no="190">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="172"/>
+      <line no="191"/>
     </source>
   </file>
 </phpunit>
