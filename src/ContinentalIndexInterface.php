@@ -13,8 +13,8 @@ interface ContinentalIndexInterface
      * Returns the value of the continentality index
      *
      * @param float $tempAmplitude Temperature amplitude value
-     * @param float $longitude The value of geographic latitude
+     * @param float $latitude The value of geographic latitude
      * @return float
      */
-    public function calcIndex(float $tempAmplitude, float $longitude) : float;
+    public function calcIndex(float $tempAmplitude, float $latitude) : float;
 }

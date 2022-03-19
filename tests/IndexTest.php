@@ -5,9 +5,12 @@ namespace Soandso\ContinentalIndex\Tests;
 use bovigo\vfs\vfsStream;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use Soandso\ContinentalIndex\ConradIndex;
 use Soandso\ContinentalIndex\Data\SourceData;
+use Soandso\ContinentalIndex\GorchinskyIndex;
 use Soandso\ContinentalIndex\HromovIndex;
 use Soandso\ContinentalIndex\Index;
+use Soandso\ContinentalIndex\ZenkerIndex;
 
 class IndexTest extends TestCase
 {
@@ -29,13 +32,29 @@ class IndexTest extends TestCase
         Mockery::close();
     }
 
-    public function testGetIndexTypes()
+    public function testSuccessGetIndexTypes()
     {
         $actual = [
             'hromov' => HromovIndex::class,
+            'gorchinsky' => GorchinskyIndex::class,
+            'conrad' => ConradIndex::class,
+            'zenker' => ZenkerIndex::class,
         ];
 
         $this->assertEquals($this->index->getIndexTypes(), $actual);
+    }
+
+    public function testErrorGetIndexTypes()
+    {
+        $actual = [
+            'hromov' => HromovIndex::class,
+            'gorchinsky' => GorchinskyIndex::class,
+            'conrad' => ConradIndex::class,
+            'zenker' => ZenkerIndex::class,
+            'zmethod' => ZenkerIndex::class,
+        ];
+
+        $this->assertNotEquals($this->index->getIndexTypes(), $actual);
     }
 
     public function testGetOutputFormats()
@@ -54,9 +73,26 @@ class IndexTest extends TestCase
         $this->assertEquals($this->index->getFilePath(), $actual);
     }
 
-    public function testGetFileOutput()
+    public function testGetFileOutputForHromovIndex()
     {
-        $actual = 'continental_indices.txt';
+        $actual = 'hromov_continental_indices.txt';
+
+        $reflector = new \ReflectionClass(Index::class);
+        $method = $reflector->getMethod('setFileOutput');
+        $method->setAccessible(true);
+        $result = $method->invokeArgs($this->index, ['hromov']);
+
+        $this->assertEquals($this->index->getFileOutput(), $actual);
+    }
+
+    public function testGetFileOutputForGorchinskyIndex()
+    {
+        $actual = 'gorchinsky_continental_indices.txt';
+
+        $reflector = new \ReflectionClass(Index::class);
+        $method = $reflector->getMethod('setFileOutput');
+        $method->setAccessible(true);
+        $result = $method->invokeArgs($this->index, ['gorchinsky']);
 
         $this->assertEquals($this->index->getFileOutput(), $actual);
     }

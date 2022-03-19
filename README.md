@@ -108,8 +108,13 @@ To get the calculation of the continentality index, use the method ```getIndex``
 $index->getIndex(string $title, string $format, string $filePath = null);
 
 $title - Type index of continentality
-At the moment, the Hromov continentality index is supported
-Register::HROMOV_INDEX
+The following methods for calculating the continentality index are supported:
+
+1. Hromov continentality index - Register::HROMOV_INDEX
+2. Gorchinsky continentality index - Register::GORCHINSKY_INDEX
+3. Conrad continentality index - Register::CONRAD_INDEX
+4. Zenker continentality index - Register::ZENKER_INDEX
+
 
 $format - Output format
 Register::FILE

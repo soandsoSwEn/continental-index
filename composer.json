@@ -11,6 +11,11 @@
     "autoload-dev": {
         "Soandso\\ContinentalIndex\\Tests": "tests"
     },
+    "scripts": {
+        "tests": [
+            "./vendor/bin/phpunit"
+        ]
+    },
     "authors": [
         {
             "name": "Dmytriyenko Vyacheslav",
