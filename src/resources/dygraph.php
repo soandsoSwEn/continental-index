@@ -1,3 +1,11 @@
+<style>
+    .dygraph-label {
+        text-align: center;
+    }
+    .dygraph-ylabel {
+        transform: rotate(-90deg);
+    }
+</style>
 <script type="text/javascript"
         src="<?= $assetsUri; ?>dygraph.min.js"></script>
 <link rel="stylesheet" src="<?= $assetsUri; ?>dygraph.css" />
@@ -8,7 +16,8 @@
         // containing div
         document.getElementById("graphdiv"),
 
-        <?php echo '"'.$assetsOutput.'"'; ?>
+        <?php echo '"'.$assetsOutput.'"'; ?>,
+        <?php echo $graphOptions; ?>
 
     );
 </script>

@@ -42,14 +42,30 @@ class ViewedBuilder implements ViewedBuilderInterface
      * @var array Default Plot Settings
      */
     private array $graphSettings = [
-        'provider' => 'dygraph',
-        'width' => 480,
-        'height' => 320,
+        /** Plot provider **/
+        'provider'   => 'dygraph',
+        /** Show or hide the range selector widget (Only for Dygraph provider) **/
+        'showRangeSelector' => null,
+        /** Height, in pixels, of the range selector widget (Only for Dygraph provider) **/
+        'rangeSelectorHeight' => null,
+        /** Width, in pixels, of the chart **/
+        'width'      => 480,
+        /** Height, in pixels, of the chart **/
+        'height'     => 320,
+        /** Text to display above the chart **/
+        'title'      => 'Continental index',
+        /** Text to display to the left of the chart's y-axis **/
+        'ylabel'     => 'Index',
+        /** Text to display below the chart's x-axis **/
+        'xlabel'     => 'Date',
     ];
+
+    private array $customOptions = [];
 
     public function __construct(array $indexAssets, array $options = null)
     {
         $this->sourcePath = dirname(__DIR__);
+        $this->setSettings($options);
         $this->assetsOutput = $this->buildGraphData($indexAssets, $this->getGraphProvider());
         $this->assetsUri = $this->getAssetUri();
     }
@@ -64,6 +80,27 @@ class ViewedBuilder implements ViewedBuilderInterface
         return $this->graphSettings['provider'];
     }
 
+    public function getGraphOptions(): string
+    {
+        unset($this->customOptions['provider']);
+        foreach ($this->customOptions as $key => $option) {
+            if (is_null($option)) {
+                unset($this->customOptions[$key]);
+            }
+        }
+
+        return json_encode($this->customOptions);
+    }
+
+    public function setSettings(array $options = null): void
+    {
+        if (is_null($options)) {
+            $this->customOptions = $this->graphSettings;
+        } else {
+            $this->customOptions = array_replace($this->graphSettings, $options);
+        }
+    }
+
     /**
      * Builds a graph of the continentality index
      * @throws Exception
@@ -74,7 +111,7 @@ class ViewedBuilder implements ViewedBuilderInterface
             throw new Exception('Data generation error for plotting');
         }
 
-        $this->buildTemplate($this->assetsOutput, $this->assetsUri, $this->getGraphProvider());
+        $this->buildTemplate($this->assetsOutput, $this->assetsUri, $this->getGraphProvider(), $this->getGraphOptions());
     }
 
     /**
@@ -84,7 +121,7 @@ class ViewedBuilder implements ViewedBuilderInterface
      * @param string $assetsUri URI of directory with plotting library
      * @param string $provider Plotting provider
      */
-    public function buildTemplate(string $assetsOutput, string $assetsUri, string $provider)
+    public function buildTemplate(string $assetsOutput, string $assetsUri, string $provider, string $graphOptions)
     {
         require $this->sourcePath . DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR  . $provider.'.php';
     }

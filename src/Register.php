@@ -103,10 +103,11 @@ class Register
      *
      * array[year, continentality Index]
      * @param array $indexAssets Continental index data (see above)
+     * @throws Exception
      */
-    public static function plot(array $indexAssets)
+    public static function plot(array $indexAssets, array $options = null)
     {
-        $viewer = new ViewedBuilder($indexAssets);
+        $viewer = new ViewedBuilder($indexAssets, $options);
         $viewer->plotGraph();
     }
 }
