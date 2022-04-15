@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="dygraph.php" path="\resources">
+    <totals>
+      <lines total="23" comments="0" code="23" executable="4" executed="0" percent="0.00"/>
+      <methods count="0" tested="0" percent="0"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="0" tested="0" percent="0"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <source>
+      <line no="1">
+        <token name="T_INLINE_HTML">&lt;style&gt;</token>
+      </line>
+      <line no="2">
+        <token name="T_INLINE_HTML">    .dygraph-label {</token>
+      </line>
+      <line no="3">
+        <token name="T_INLINE_HTML">        text-align: center;</token>
+      </line>
+      <line no="4">
+        <token name="T_INLINE_HTML">    }</token>
+      </line>
+      <line no="5">
+        <token name="T_INLINE_HTML">    .dygraph-ylabel {</token>
+      </line>
+      <line no="6">
+        <token name="T_INLINE_HTML">        transform: rotate(-90deg);</token>
+      </line>
+      <line no="7">
+        <token name="T_INLINE_HTML">    }</token>
+      </line>
+      <line no="8">
+        <token name="T_INLINE_HTML">&lt;/style&gt;</token>
+      </line>
+      <line no="9">
+        <token name="T_INLINE_HTML">&lt;script type="text/javascript"</token>
+      </line>
+      <line no="10">
+        <token name="T_INLINE_HTML">        src="</token>
+        <token name="T_OPEN_TAG_WITH_ECHO">&lt;?=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$assetsUri</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_TAG">?&gt;</token>
+        <token name="T_INLINE_HTML">dygraph.min.js"&gt;&lt;/script&gt;</token>
+      </line>
+      <line no="11">
+        <token name="T_INLINE_HTML">&lt;link rel="stylesheet" src="</token>
+        <token name="T_OPEN_TAG_WITH_ECHO">&lt;?=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$assetsUri</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_TAG">?&gt;</token>
+        <token name="T_INLINE_HTML">dygraph.css" /&gt;</token>
+      </line>
+      <line no="12">
+        <token name="T_INLINE_HTML">&lt;div id="graphdiv"&gt;&lt;/div&gt;</token>
+      </line>
+      <line no="13">
+        <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+      </line>
+      <line no="14">
+        <token name="T_INLINE_HTML">    g = new Dygraph(</token>
+      </line>
+      <line no="15"/>
+      <line no="16">
+        <token name="T_INLINE_HTML">        // containing div</token>
+      </line>
+      <line no="17">
+        <token name="T_INLINE_HTML">        document.getElementById("graphdiv"),</token>
+      </line>
+      <line no="18"/>
+      <line no="19">
+        <token name="T_INLINE_HTML">        </token>
+        <token name="T_OPEN_TAG">&lt;?php </token>
+        <token name="T_ECHO">echo</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'"'</token>
+        <token name="T_DOT">.</token>
+        <token name="T_VARIABLE">$assetsOutput</token>
+        <token name="T_DOT">.</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'"'</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_TAG">?&gt;</token>
+        <token name="T_INLINE_HTML">,</token>
+      </line>
+      <line no="20">
+        <token name="T_INLINE_HTML">        </token>
+        <token name="T_OPEN_TAG">&lt;?php </token>
+        <token name="T_ECHO">echo</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$graphOptions</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_TAG">?&gt;</token>
+      </line>
+      <line no="21"/>
+      <line no="22">
+        <token name="T_INLINE_HTML">    );</token>
+      </line>
+      <line no="23">
+        <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+      </line>
+    </source>
+  </file>
+</phpunit>
