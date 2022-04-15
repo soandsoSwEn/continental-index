@@ -2,20 +2,21 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Register.php" path="\">
     <totals>
-      <lines total="100" comments="53" code="47" executable="4" executed="4" percent="100.00"/>
-      <methods count="3" tested="3" percent="100.00"/>
+      <lines total="114" comments="60" code="54" executable="6" executed="4" percent="66.67"/>
+      <methods count="4" tested="3" percent="75.00"/>
       <functions count="0" tested="0" percent="0"/>
-      <classes count="1" tested="1" percent="100.00"/>
+      <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Soandso\ContinentalIndex\Register" start="14" executable="4" executed="4" crap="3">
+    <class name="Soandso\ContinentalIndex\Register" start="15" executable="6" executed="4" crap="4.59">
       <namespace name="Soandso\ContinentalIndex"/>
-      <method name="__construct" signature="__construct(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)" start="66" end="69" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="setData" signature="setData(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)" start="80" end="83" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="getIndex" signature="getIndex(string $title, string $format, string $filePath)" start="94" end="98" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="__construct" signature="__construct(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)" start="67" end="70" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="setData" signature="setData(string $inputType, $source, string $inputTempUnits, string $outputTempUnits, float $latitude)" start="81" end="84" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getIndex" signature="getIndex(string $title, string $format, string $filePath)" start="95" end="99" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="plot" signature="plot(array $indexAssets, array $options)" start="108" end="112" crap="2" executable="2" executed="0" coverage="0"/>
     </class>
     <coverage>
-      <line nr="68">
+      <line nr="69">
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testSetData"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
@@ -25,17 +26,8 @@
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
       </line>
-      <line nr="82">
+      <line nr="83">
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testSetData"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
-        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
-      </line>
-      <line nr="96">
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
@@ -45,6 +37,15 @@
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
       </line>
       <line nr="97">
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForFileSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testErrorGetIndexForArraySource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputJsonSource"/>
+        <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForInputAndOutputJsonSource"/>
+      </line>
+      <line nr="98">
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForFileSource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForArraySource"/>
         <covered by="Soandso\ContinentalIndex\Tests\RegisterTest::testGetIndexForOutputJsonSource"/>
@@ -96,41 +97,53 @@
         <token name="T_STRING">SourceDataInterface</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="8"/>
-      <line no="9">
+      <line no="8">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Soandso</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ContinentalIndex</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">View</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ViewedBuilder</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="9"/>
+      <line no="10">
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="10">
+      <line no="11">
         <token name="T_DOC_COMMENT"> * Class Register is the core class for the component application</token>
       </line>
-      <line no="11">
+      <line no="12">
         <token name="T_DOC_COMMENT"> *</token>
       </line>
-      <line no="12">
+      <line no="13">
         <token name="T_DOC_COMMENT"> * @author Dmytriyenko Vyacheslav &lt;dmytriyenko.vyacheslav@gmail.com&gt;</token>
       </line>
-      <line no="13">
+      <line no="14">
         <token name="T_DOC_COMMENT"> */</token>
       </line>
-      <line no="14">
+      <line no="15">
         <token name="T_CLASS">class</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Register</token>
       </line>
-      <line no="15">
+      <line no="16">
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="16">
+      <line no="17">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="17">
+      <line no="18">
         <token name="T_DOC_COMMENT">     * Hromov index title</token>
       </line>
-      <line no="18">
+      <line no="19">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="19">
+      <line no="20">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -141,18 +154,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'hromov'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="20"/>
-      <line no="21">
+      <line no="21"/>
+      <line no="22">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="22">
+      <line no="23">
         <token name="T_DOC_COMMENT">     * Gorchinsky index title</token>
       </line>
-      <line no="23">
+      <line no="24">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="24">
+      <line no="25">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -163,18 +176,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'gorchinsky'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="25"/>
-      <line no="26">
+      <line no="26"/>
+      <line no="27">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="27">
+      <line no="28">
         <token name="T_DOC_COMMENT">     * Conrad index title</token>
       </line>
-      <line no="28">
+      <line no="29">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="29">
+      <line no="30">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -185,18 +198,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'conrad'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="30"/>
-      <line no="31">
+      <line no="31"/>
+      <line no="32">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="32">
+      <line no="33">
         <token name="T_DOC_COMMENT">     * Zenker index title</token>
       </line>
-      <line no="33">
+      <line no="34">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="34">
+      <line no="35">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -207,18 +220,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'zenker'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="35"/>
-      <line no="36">
+      <line no="36"/>
+      <line no="37">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="37">
+      <line no="38">
         <token name="T_DOC_COMMENT">     * Fahrenheit title</token>
       </line>
-      <line no="38">
+      <line no="39">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="39">
+      <line no="40">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -229,18 +242,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'F'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="40"/>
-      <line no="41">
+      <line no="41"/>
+      <line no="42">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="42">
+      <line no="43">
         <token name="T_DOC_COMMENT">     * Celsius title</token>
       </line>
-      <line no="43">
+      <line no="44">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="44">
+      <line no="45">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -251,18 +264,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'C'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="45"/>
-      <line no="46">
+      <line no="46"/>
+      <line no="47">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="47">
+      <line no="48">
         <token name="T_DOC_COMMENT">     * File format title</token>
       </line>
-      <line no="48">
+      <line no="49">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="49">
+      <line no="50">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -273,18 +286,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'file'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="50"/>
-      <line no="51">
+      <line no="51"/>
+      <line no="52">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="52">
+      <line no="53">
         <token name="T_DOC_COMMENT">     * Array format title</token>
       </line>
-      <line no="53">
+      <line no="54">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="54">
+      <line no="55">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -295,18 +308,18 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'array'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="55"/>
-      <line no="56">
+      <line no="56"/>
+      <line no="57">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="57">
+      <line no="58">
         <token name="T_DOC_COMMENT">     * Json format title</token>
       </line>
-      <line no="58">
+      <line no="59">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="59">
+      <line no="60">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
@@ -317,26 +330,26 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'json'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="60"/>
-      <line no="61">
+      <line no="61"/>
+      <line no="62">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="62">
+      <line no="63">
         <token name="T_DOC_COMMENT">     * @var SourceDataInterface object for working with source data</token>
       </line>
-      <line no="63">
+      <line no="64">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="64">
+      <line no="65">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$sourceData</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="65"/>
-      <line no="66">
+      <line no="66"/>
+      <line no="67">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -367,11 +380,11 @@
         <token name="T_VARIABLE">$latitude</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="67">
+      <line no="68">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="68">
+      <line no="69">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -393,40 +406,40 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="69">
+      <line no="70">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="70"/>
-      <line no="71">
+      <line no="71"/>
+      <line no="72">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="72">
+      <line no="73">
         <token name="T_DOC_COMMENT">     * Initiates start-up data for the calculation of the continental index</token>
       </line>
-      <line no="73">
+      <line no="74">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="74">
+      <line no="75">
         <token name="T_DOC_COMMENT">     * @param string $inputType Input source type</token>
       </line>
-      <line no="75">
+      <line no="76">
         <token name="T_DOC_COMMENT">     * @param string|array $source Input source</token>
       </line>
-      <line no="76">
+      <line no="77">
         <token name="T_DOC_COMMENT">     * @param string $inputTempUnits Input temperature amplitude units</token>
       </line>
-      <line no="77">
+      <line no="78">
         <token name="T_DOC_COMMENT">     * @param string $outputTempUnits Output temperature amplitude units</token>
       </line>
-      <line no="78">
+      <line no="79">
         <token name="T_DOC_COMMENT">     * @param float $latitude Location latitude</token>
       </line>
-      <line no="79">
+      <line no="80">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="80">
+      <line no="81">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -457,11 +470,11 @@
         <token name="T_VARIABLE">$latitude</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="81">
+      <line no="82">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="82">
+      <line no="83">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -489,40 +502,40 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="83">
+      <line no="84">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="84"/>
-      <line no="85">
+      <line no="85"/>
+      <line no="86">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="86">
+      <line no="87">
         <token name="T_DOC_COMMENT">     * Returns the result of the calculation of the continental index</token>
       </line>
-      <line no="87">
+      <line no="88">
         <token name="T_DOC_COMMENT">     *</token>
       </line>
-      <line no="88">
+      <line no="89">
         <token name="T_DOC_COMMENT">     * @param string $title Type index of continentality</token>
       </line>
-      <line no="89">
+      <line no="90">
         <token name="T_DOC_COMMENT">     * @param string $format Output format</token>
       </line>
-      <line no="90">
+      <line no="91">
         <token name="T_DOC_COMMENT">     * @param string|null $filePath The path to the directory for extracting the results file</token>
       </line>
-      <line no="91">
+      <line no="92">
         <token name="T_DOC_COMMENT">     * @return array|bool|string</token>
       </line>
-      <line no="92">
+      <line no="93">
         <token name="T_DOC_COMMENT">     * @throws Exception</token>
       </line>
-      <line no="93">
+      <line no="94">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="94">
+      <line no="95">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -549,11 +562,11 @@
         <token name="T_STRING">null</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="95">
+      <line no="96">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="96">
+      <line no="97">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$contitnetalIndex</token>
         <token name="T_WHITESPACE"> </token>
@@ -573,7 +586,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="97">
+      <line no="98">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -587,14 +600,95 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="98">
+      <line no="99">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="99">
+      <line no="100"/>
+      <line no="101">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="102">
+        <token name="T_DOC_COMMENT">     * Plots the continentality index</token>
+      </line>
+      <line no="103">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="104">
+        <token name="T_DOC_COMMENT">     * array[year, continentality Index]</token>
+      </line>
+      <line no="105">
+        <token name="T_DOC_COMMENT">     * @param array $indexAssets Continental index data (see above)</token>
+      </line>
+      <line no="106">
+        <token name="T_DOC_COMMENT">     * @throws Exception</token>
+      </line>
+      <line no="107">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="108">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STATIC">static</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">plot</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$indexAssets</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$options</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="109">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="110">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$viewer</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ViewedBuilder</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$indexAssets</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$options</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="111">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$viewer</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">plotGraph</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="112">
+        <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="100"/>
+      <line no="113">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="114"/>
     </source>
   </file>
 </phpunit>

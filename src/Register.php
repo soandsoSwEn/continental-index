@@ -5,6 +5,7 @@ namespace Soandso\ContinentalIndex;
 use Exception;
 use Soandso\ContinentalIndex\Data\SourceData;
 use Soandso\ContinentalIndex\Data\SourceDataInterface;
+use Soandso\ContinentalIndex\View\ViewedBuilder;
 
 /**
  * Class Register is the core class for the component application
@@ -95,5 +96,18 @@ class Register
     {
         $contitnetalIndex = new Index($title, $format, $filePath);
         return $contitnetalIndex->getIndexAssets($this->sourceData);
+    }
+
+    /**
+     * Plots the continentality index
+     *
+     * array[year, continentality Index]
+     * @param array $indexAssets Continental index data (see above)
+     * @throws Exception
+     */
+    public static function plot(array $indexAssets, array $options = null)
+    {
+        $viewer = new ViewedBuilder($indexAssets, $options);
+        $viewer->plotGraph();
     }
 }

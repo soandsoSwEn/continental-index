@@ -13,6 +13,8 @@ Continental index
 
 PHP library for calculating the index of continentality - a numerical characteristic of continental climate.
 
+<img src="./images/Continental-Index.png" width="629" height="417">
+
 
 Requirements
 -----------
@@ -125,11 +127,64 @@ $filePath - The path to the directory for extracting the results file
 
 ```
 
-Example usage
+**Plotting**
+
+You can build a line graph of continentality index versus time for a given location.
+To do this, you need to use the ```plot()``` method of the ```Register``` class, passing it the calculated data that were obtained using ```getIndex``` (see above)
+
+```php Register::plot($indexAssets)```
+
+The ```plot``` method also takes as its second optional argument options for plotting.
+
+```php Register::plot($indexAssets, $options)```
+
+```php
+$options = [
+/** Show or hide the range selector widget (Only for Dygraph provider) **/
+'showRangeSelector'      => null, //true or false
+/** Height, in pixels, of the range selector widget (Only for Dygraph provider) **/
+'rangeSelectorHeight'    => null, //int
+/** Width, in pixels, of the chart **/
+'width'                  => null, //int
+/** Height, in pixels, of the chart **/
+'height'                 => null, //int
+'title'                  => 'Continental index',
+/** Text to display to the left of the chart's y-axis **/
+'ylabel'                 => 'Index', //string
+/** Text to display below the chart's x-axis **/
+'xlabel'                 => 'Date', //string
+];
+```
+
+**Example usage**
+
+Index calculation
 ```php
 $index = new Register(Register::FILE, __DIR__ . '/amplitude.txt', Register::FAHRENHEIT, Register::CELSIUS, 45.5);
-$index->getIndex(Register::HROMOV_INDEX, Register::FILE, __DIR__);
+$indexAssets = $index->getIndex(Register::HROMOV_INDEX, Register::FILE, __DIR__);
 ```
+
+Plotting
+
+```php
+Register::plot($indexAssets);
+```
+
+Specifying Custom Graph Options
+
+```php
+Register::plot($indexAssets, [
+        'showRangeSelector' => true,
+        'rangeSelectorHeight' => 30,
+        'title' => 'Hromov Index',
+]);
+```
+
+Credits
+-------
+
+Dygraphs - open source JavaScript charting library. (https://dygraphs.com)
+
 
 Standards
 ---------
