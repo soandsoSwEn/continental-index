@@ -97,6 +97,13 @@ class ViewedBuilder implements ViewedBuilderInterface
         if (is_null($options)) {
             $this->customOptions = $this->graphSettings;
         } else {
+            $diffOptions = array_diff_key($options, $this->graphSettings);
+            if (count($diffOptions) > 0) {
+                foreach ($diffOptions as $key => $valueNotOption) {
+                    unset($options[$key]);
+                }
+            }
+
             $this->customOptions = array_replace($this->graphSettings, $options);
         }
     }
