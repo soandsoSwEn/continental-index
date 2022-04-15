@@ -3,6 +3,9 @@
     "description": "Library for calculating the index of continentality - a numerical characteristic of continental climate",
     "type": "library",
     "license": "GPL-2.0-or-later",
+    "keywords": [
+        "meteorology", "weather", "climate", "climate change", "climatology", "continental index"
+    ],
     "autoload": {
         "psr-4": {
             "Soandso\\ContinentalIndex\\": "src/"
